@@ -15,9 +15,22 @@
 		B049A8CD234786C700E630BB /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049A8CC234786C700E630BB /* Extension + UIViewController.swift */; };
 		B049A8D0234791D000E630BB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049A8CF234791D000E630BB /* Utils.swift */; };
 		B049A8D22347AD7D00E630BB /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049A8D12347AD7D00E630BB /* MasterViewController.swift */; };
+		B0701953234E2A7100F7141A /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0701951234E2A7100F7141A /* ContainerViewController.swift */; };
+		B0701954234E2A7100F7141A /* ContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0701952234E2A7100F7141A /* ContainerViewController.xib */; };
+		B0701957234E2D0F00F7141A /* AllRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0701955234E2D0F00F7141A /* AllRoomCell.swift */; };
+		B0701958234E2D0F00F7141A /* AllRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0701956234E2D0F00F7141A /* AllRoomCell.xib */; };
 		B0A564B5234251F5000764D6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A564B4234251F5000764D6 /* Service.swift */; };
 		B0CB6DE12346452300626CFA /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CB6DE02346452300626CFA /* Register.swift */; };
 		B0CB6DE42346496400626CFA /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CB6DE32346496400626CFA /* Extension+UIView.swift */; };
+		B0E4007F2349EFEC001954D7 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E4007E2349EFEC001954D7 /* WebSocket.swift */; };
+		B0E400812349FB27001954D7 /* AllRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E400802349FB27001954D7 /* AllRoom.swift */; };
+		B0E40086234A2367001954D7 /* AllRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E40084234A2367001954D7 /* AllRoomViewController.swift */; };
+		B0E40087234A2367001954D7 /* AllRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E40085234A2367001954D7 /* AllRoomViewController.xib */; };
+		B0E4008A234A2375001954D7 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E40088234A2375001954D7 /* RankViewController.swift */; };
+		B0E4008B234A2375001954D7 /* RankViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E40089234A2375001954D7 /* RankViewController.xib */; };
+		B0E4008E234A2387001954D7 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E4008C234A2387001954D7 /* ProfileViewController.swift */; };
+		B0E4008F234A2387001954D7 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E4008D234A2387001954D7 /* ProfileViewController.xib */; };
+		B0E40094234A409B001954D7 /* AdvanceTemplate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E40093234A409B001954D7 /* AdvanceTemplate.swift */; };
 		B0F890372344DC0E005B496A /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F890362344DC0D005B496A /* Enums.swift */; };
 		B0F8903A2344E4A4005B496A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F890382344E4A4005B496A /* LoginViewController.swift */; };
 		B0F8903B2344E4A4005B496A /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F890392344E4A4005B496A /* LoginViewController.xib */; };
@@ -43,9 +56,22 @@
 		B049A8CC234786C700E630BB /* Extension + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
 		B049A8CF234791D000E630BB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B049A8D12347AD7D00E630BB /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		B0701951234E2A7100F7141A /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
+		B0701952234E2A7100F7141A /* ContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContainerViewController.xib; sourceTree = "<group>"; };
+		B0701955234E2D0F00F7141A /* AllRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRoomCell.swift; sourceTree = "<group>"; };
+		B0701956234E2D0F00F7141A /* AllRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllRoomCell.xib; sourceTree = "<group>"; };
 		B0A564B4234251F5000764D6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		B0CB6DE02346452300626CFA /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		B0CB6DE32346496400626CFA /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		B0E4007E2349EFEC001954D7 /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
+		B0E400802349FB27001954D7 /* AllRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRoom.swift; sourceTree = "<group>"; };
+		B0E40084234A2367001954D7 /* AllRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRoomViewController.swift; sourceTree = "<group>"; };
+		B0E40085234A2367001954D7 /* AllRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllRoomViewController.xib; sourceTree = "<group>"; };
+		B0E40088234A2375001954D7 /* RankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
+		B0E40089234A2375001954D7 /* RankViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RankViewController.xib; sourceTree = "<group>"; };
+		B0E4008C234A2387001954D7 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		B0E4008D234A2387001954D7 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		B0E40093234A409B001954D7 /* AdvanceTemplate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdvanceTemplate.swift; sourceTree = "<group>"; };
 		B0F890362344DC0D005B496A /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		B0F890382344E4A4005B496A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B0F890392344E4A4005B496A /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
@@ -121,6 +147,7 @@
 		B049A8D32347B0AE00E630BB /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				B0E40092234A400A001954D7 /* AdvanceTemplate */,
 				B049A8D42347B13B00E630BB /* MasterViewController */,
 				B0CB6DE22346494B00626CFA /* Extensions */,
 				B0A564B3234251D5000764D6 /* Service */,
@@ -141,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				B0A564B4234251F5000764D6 /* Service.swift */,
+				B0E4007E2349EFEC001954D7 /* WebSocket.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -154,6 +182,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		B0E40092234A400A001954D7 /* AdvanceTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				B0E40093234A409B001954D7 /* AdvanceTemplate.swift */,
+			);
+			path = AdvanceTemplate;
+			sourceTree = "<group>";
+		};
 		B0F890332344DBF1005B496A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,6 +199,14 @@
 				B0F8904623450AD9005B496A /* RegisterViewController.xib */,
 				B049A8C823477EAB00E630BB /* DashBoardViewController.swift */,
 				B049A8C923477EAB00E630BB /* DashBoardViewController.xib */,
+				B0E40084234A2367001954D7 /* AllRoomViewController.swift */,
+				B0E40085234A2367001954D7 /* AllRoomViewController.xib */,
+				B0E40088234A2375001954D7 /* RankViewController.swift */,
+				B0E40089234A2375001954D7 /* RankViewController.xib */,
+				B0E4008C234A2387001954D7 /* ProfileViewController.swift */,
+				B0E4008D234A2387001954D7 /* ProfileViewController.xib */,
+				B0701951234E2A7100F7141A /* ContainerViewController.swift */,
+				B0701952234E2A7100F7141A /* ContainerViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -173,6 +217,7 @@
 				B0F8903C2344EE6B005B496A /* Login.swift */,
 				B0F890422344F9F5005B496A /* AccountDataManager.swift */,
 				B0CB6DE02346452300626CFA /* Register.swift */,
+				B0E400802349FB27001954D7 /* AllRoom.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -180,6 +225,8 @@
 		B0F890352344DBFE005B496A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B0701955234E2D0F00F7141A /* AllRoomCell.swift */,
+				B0701956234E2D0F00F7141A /* AllRoomCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,9 +303,14 @@
 			files = (
 				B00BA4DF234235C700FD6D35 /* LaunchScreen.storyboard in Resources */,
 				B00BA4DC234235C700FD6D35 /* Assets.xcassets in Resources */,
+				B0701958234E2D0F00F7141A /* AllRoomCell.xib in Resources */,
+				B0E4008F234A2387001954D7 /* ProfileViewController.xib in Resources */,
 				B0F8903B2344E4A4005B496A /* LoginViewController.xib in Resources */,
 				B0F8904823450AD9005B496A /* RegisterViewController.xib in Resources */,
 				B049A8CB23477EAB00E630BB /* DashBoardViewController.xib in Resources */,
+				B0E4008B234A2375001954D7 /* RankViewController.xib in Resources */,
+				B0E40087234A2367001954D7 /* AllRoomViewController.xib in Resources */,
+				B0701954234E2A7100F7141A /* ContainerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,17 +365,25 @@
 			files = (
 				B0F890432344F9F5005B496A /* AccountDataManager.swift in Sources */,
 				B0F8903A2344E4A4005B496A /* LoginViewController.swift in Sources */,
+				B0E4008E234A2387001954D7 /* ProfileViewController.swift in Sources */,
 				B0CB6DE42346496400626CFA /* Extension+UIView.swift in Sources */,
 				B0F890412344F86A005B496A /* Helper.swift in Sources */,
+				B0E4007F2349EFEC001954D7 /* WebSocket.swift in Sources */,
 				B0CB6DE12346452300626CFA /* Register.swift in Sources */,
+				B0E4008A234A2375001954D7 /* RankViewController.swift in Sources */,
 				B049A8D0234791D000E630BB /* Utils.swift in Sources */,
 				B0F8904723450AD9005B496A /* RegisterViewController.swift in Sources */,
 				B049A8CD234786C700E630BB /* Extension + UIViewController.swift in Sources */,
 				B0F8903D2344EE6B005B496A /* Login.swift in Sources */,
 				B00BA4D5234235C500FD6D35 /* AppDelegate.swift in Sources */,
 				B049A8CA23477EAB00E630BB /* DashBoardViewController.swift in Sources */,
+				B0701957234E2D0F00F7141A /* AllRoomCell.swift in Sources */,
+				B0E40094234A409B001954D7 /* AdvanceTemplate.swift in Sources */,
 				B0F890372344DC0E005B496A /* Enums.swift in Sources */,
+				B0701953234E2A7100F7141A /* ContainerViewController.swift in Sources */,
 				B049A8D22347AD7D00E630BB /* MasterViewController.swift in Sources */,
+				B0E40086234A2367001954D7 /* AllRoomViewController.swift in Sources */,
+				B0E400812349FB27001954D7 /* AllRoom.swift in Sources */,
 				B0A564B5234251F5000764D6 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

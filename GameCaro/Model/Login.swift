@@ -13,6 +13,7 @@ class Login_Request : MI{
 }
 
 class User : MI{
+    @objc dynamic var _id = ""
     @objc dynamic var username = ""
     @objc dynamic var win_game = 0
     @objc dynamic var total_game = 0

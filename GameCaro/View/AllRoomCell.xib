@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="cellAllRoom" id="gTV-IL-0wX" customClass="AllRoomCell" customModule="GameCaro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rps-cl-mWK" userLabel="MainVIew">
+                        <rect key="frame" x="5" y="5" width="290" height="290"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="MVd-Gr-GUx">
+                                <rect key="frame" x="0.0" y="25" width="290" height="240"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2yw-Ns-W0f">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="63.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Room Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydW-9V-0jS">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="27.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bB-jI-UpG">
+                                                <rect key="frame" x="0.0" y="35.5" width="290" height="28"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="B0U-lS-VZ9">
+                                        <rect key="frame" x="0.0" y="88.5" width="290" height="63"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bet Point" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cwF-fI-IJG">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="27.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4BT-GL-9Ov">
+                                                <rect key="frame" x="0.0" y="35.5" width="290" height="27.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ezD-Mw-MDA">
+                                        <rect key="frame" x="0.0" y="176.5" width="290" height="63.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Created Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vAx-8H-oyH">
+                                                <rect key="frame" x="0.0" y="0.0" width="290" height="28"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wzR-Wu-RoM">
+                                                <rect key="frame" x="0.0" y="36" width="290" height="27.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MVd-Gr-GUx" firstAttribute="leading" secondItem="Rps-cl-mWK" secondAttribute="leading" id="1o3-tp-y9R"/>
+                            <constraint firstItem="MVd-Gr-GUx" firstAttribute="top" secondItem="Rps-cl-mWK" secondAttribute="top" constant="25" id="CLn-IO-H82"/>
+                            <constraint firstAttribute="trailing" secondItem="MVd-Gr-GUx" secondAttribute="trailing" id="Wwh-5W-JI4"/>
+                            <constraint firstAttribute="bottom" secondItem="MVd-Gr-GUx" secondAttribute="bottom" constant="25" id="uxO-Qy-Po9"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Rps-cl-mWK" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="BIm-A7-Ul8"/>
+                <constraint firstAttribute="bottom" secondItem="Rps-cl-mWK" secondAttribute="bottom" constant="5" id="DQQ-2X-LKz"/>
+                <constraint firstItem="Rps-cl-mWK" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="K2B-Ng-vdt"/>
+                <constraint firstAttribute="trailing" secondItem="Rps-cl-mWK" secondAttribute="trailing" constant="5" id="vta-TJ-m5k"/>
+            </constraints>
+            <connections>
+                <outlet property="cardView" destination="Rps-cl-mWK" id="bG8-wy-738"/>
+                <outlet property="lbBetPoint" destination="cwF-fI-IJG" id="J4Z-0F-V6x"/>
+                <outlet property="lbBetPointValue" destination="4BT-GL-9Ov" id="vkl-eS-DOZ"/>
+                <outlet property="lbCreatedTime" destination="vAx-8H-oyH" id="mHf-Vq-YS7"/>
+                <outlet property="lbCreatedTimeValue" destination="wzR-Wu-RoM" id="MKy-vX-hua"/>
+                <outlet property="lbRoomCodeValue" destination="8bB-jI-UpG" id="A8o-uS-Vew"/>
+                <outlet property="lbRoomcode" destination="ydW-9V-0jS" id="kDR-TD-mur"/>
+            </connections>
+        </collectionViewCell>
+    </objects>
+</document>

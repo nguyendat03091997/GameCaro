@@ -7,6 +7,7 @@ target 'GameCaro' do
 
   # Pods for GameCaro
     pod 'Socket.IO-Client-Swift', '~> 15.1.0'
+    pod 'Starscream', '~> 3.0.2'
     pod 'Alamofire', '~> 4.0.0-rc.2'
 
 end

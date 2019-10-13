@@ -14,4 +14,13 @@ class Utils{
         view.layer.cornerRadius = radius
         view.layer.masksToBounds = true
     }
+    
+    class func createImage(name: String) ->UIImage{
+        return UIImage.init(named: name)?.withRenderingMode(.alwaysOriginal) ?? UIImage()
+    }
+    
+    class func formatData(_ data: String) ->String{
+        let temp = data.replacingOccurrences(of: "T", with: " ")
+        return String(temp.prefix(19))
+    }
 }

@@ -12,6 +12,7 @@ import Alamofire
 let service = Service.shareInstance()
 class Service{
     static var instance: Service!
+    let url: String = "http://localhost:3001"
     class func shareInstance() ->Service{
         if(instance == nil){
             return Service()
@@ -20,7 +21,7 @@ class Service{
     }
     
     func requestAPI(apiFunc: APIFunc, params: MI, success: @escaping ((ITAPIResponse)->Void), failure: @escaping ((String)->Void)){
-        let url = "http://localhost:3001" + apiFunc.rawValue
+        let url = self.url + apiFunc.rawValue
         
         let header: HTTPHeaders = [
             "Content-Type" : "application/json",
@@ -47,9 +48,31 @@ class Service{
         
     }
     
+    func getDataAPI(apiFunc: APIFunc, success: @escaping ((ITAPIResponse)->Void), failure: @escaping ((String)->Void)) {
+        let url = self.url + apiFunc.rawValue
+        
+        getAlamofire(url: url).responseJSON { (data) in
+            let response = self.processResponse(response: data)
+
+            if(data.response?.statusCode == 200){ // OK
+                success(response)
+            }else{
+                let data = response.data as! NSDictionary
+                let errorResponse = data.value(forKey: "error_message") as! String
+                failure(errorResponse)
+            }
+        }
+        
+    }
+    
     func requestAlamofire(url: String, method: HTTPMethod, params: Parameters, encoding: ParameterEncoding, headers: HTTPHeaders) -> DataRequest {
         return Alamofire.request(url, method: method, parameters: params, encoding: encoding, headers: headers)
     }
+    
+    func getAlamofire(url: String) -> DataRequest {
+        return Alamofire.request(url)
+    }
+    
     
 }
 

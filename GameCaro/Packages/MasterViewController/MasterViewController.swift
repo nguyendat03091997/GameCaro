@@ -18,7 +18,14 @@ class MasterViewController: UIViewController {
         self.navigationController?.navigationBar.isHidden = false
         self.navigationItem.title = title
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "backk")?.withRenderingMode(.alwaysOriginal), style: .plain, target: self, action: #selector(handleLeftItem))
-        self.navigationController?.navigationBar.barTintColor = UIColor(red:0.75, green:0.43, blue:0.43, alpha:1.0)
+        self.navigationController?.navigationBar.barTintColor = template.primaryColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+    }
+    
+    func setNavigationTitle(_ title: String) {
+        self.navigationController?.navigationBar.isHidden = false
+        self.navigationItem.title = title
+        self.navigationController?.navigationBar.barTintColor = template.primaryColor
         self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
     }
     

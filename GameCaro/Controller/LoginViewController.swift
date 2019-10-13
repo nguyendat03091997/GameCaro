@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SocketIO
 
 class LoginViewController: MasterViewController {
     
@@ -24,7 +25,12 @@ class LoginViewController: MasterViewController {
     func setupView() {
         self.hideNavigationBar()
     }
-
+    
+    func loginSuccess() {
+        let viewcontainer = ContainerViewController()
+        self.present(viewcontainer, animated: true, completion: nil)
+    }
+  
     
     @IBAction func loginTouched(sender: UIButton){
       
@@ -36,7 +42,9 @@ class LoginViewController: MasterViewController {
         Service.loginProcess(request: request, success: { (response) in
             
             self.view.hideActivity()
-            self.dialogSuccess("Login is success !")
+            self.dialogSuccess("Login is success !", implement: {
+                self.loginSuccess()
+            })
             
         }) { (error) in
             self.view.hideActivity()
