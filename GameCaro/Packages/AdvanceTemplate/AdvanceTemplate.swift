@@ -22,6 +22,53 @@ class AdvanceTemplate{
     let primaryColor = UIColor(red:0.05, green:0.66, blue:0.80, alpha:1.0)
 }
 
+open class SkyView: UIView {
+    @IBOutlet open var view: UIView!
+    func classNameAsString(_ obj: Any) -> String {
+        return String(describing: type(of: (obj as AnyObject))).replacingOccurrences(of:"", with:".Type")
+    }
+    
+    func xibSetup() {
+        view = loadViewFromNib()
+        view.backgroundColor = UIColor.clear
+        self.backgroundColor = UIColor.clear
+        view.frame = bounds
+        addSubview(view)
+        self.setFullLayout(view)
+    }
+    
+    override open func awakeFromNib() {
+        super.awakeFromNib()
+        
+        initStyle()
+    }
+    
+    open func initStyle() {
+        
+    }
+    
+    open func loadViewFromNib() -> UIView {
+        //        let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName:self.classNameAsString(self), bundle: ProjectBundle)
+        let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
+        
+        return view
+    }
+    
+    public override init(frame: CGRect) {
+        super.init(frame: frame)
+        xibSetup()
+        initStyle()
+    }
+    
+    public required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        xibSetup()
+    }
+}
+
+
+
 class SkyButton: UIButton {
     
     override func awakeFromNib() {
