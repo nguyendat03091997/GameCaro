@@ -13,6 +13,10 @@ class LoginViewController: MasterViewController {
     
     @IBOutlet weak var btnLogin: UIButton!
 
+    @IBOutlet weak var userNameView: EdittextController!
+    
+    @IBOutlet weak var passwordView: EdittextController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -34,9 +38,17 @@ class LoginViewController: MasterViewController {
     
     @IBAction func loginTouched(sender: UIButton){
       
+        let validForm = validateLogin()
+        if (!validForm.isValided) {
+            return;
+        }
+        
         let request = Login_Request()
-        request.username = "thedat1"
-        request.password = "key1234"
+//        request.username = "thedat1"
+//        request.password = "key1234"
+
+        request.username = validForm.username
+        request.password = validForm.password
         self.view.showActivity()
         
         Service.loginProcess(request: request, success: { (response) in
@@ -58,5 +70,20 @@ class LoginViewController: MasterViewController {
         self.push(registerViewController)
     }
 
+    func validateLogin()-> (username:String,password:String, isValided: Bool){
+        let username = userNameView.value
+        let password = passwordView.value
+        var isValided: Bool = true
+        if (username.isEmpty){
+            userNameView.errorText = "Username is required"
+            isValided = false
+        }
+        if (password.isEmpty){
+            passwordView.errorText = "Password is required"
+            isValided = false
+        }
+        return (username, password, isValided)
+        
+    }
 
 }

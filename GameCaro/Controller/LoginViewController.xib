@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,6 +11,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="GameCaro" customModuleProvider="target">
             <connections>
                 <outlet property="btnLogin" destination="cbC-j4-ftc" id="iql-c3-lbU"/>
+                <outlet property="passwordView" destination="Ehi-lQ-m48" id="F9Y-Fq-wHt"/>
+                <outlet property="userNameView" destination="Co8-2h-eSB" id="UvU-0z-Fbe"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,35 +21,89 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbC-j4-ftc">
-                    <rect key="frame" x="132.5" y="328.5" width="110" height="30"/>
-                    <color key="backgroundColor" red="1" green="0.18242403879999999" blue="0.10900906270000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XLw-Pd-dwz" userLabel="Main View">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbC-j4-ftc" userLabel="Button Login">
+                            <rect key="frame" x="168.5" y="436.5" width="38" height="30"/>
+                            <state key="normal" title="Login">
+                                <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="loginTouchedWithSender:" destination="-1" eventType="touchUpInside" id="gNM-df-nh0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pn3-z8-bV4" userLabel="Button Register">
+                            <rect key="frame" x="159" y="466.5" width="57" height="30"/>
+                            <state key="normal" title="Register"/>
+                            <connections>
+                                <action selector="gotoRegisterWithSender:" destination="-1" eventType="touchUpInside" id="qJc-7e-CSj"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="4KQ-hb-ucS">
+                            <rect key="frame" x="40" y="238.5" width="295" height="190"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Co8-2h-eSB" userLabel="Username View" customClass="EdittextController" customModule="GameCaro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="295" height="95"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Username"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSecureInspect" value="NO"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ehi-lQ-m48" userLabel="Password View" customClass="EdittextController" customModule="GameCaro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="95" width="295" height="95"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Password"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSecureInspect" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="190" id="HXJ-JR-Jd3"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qx-VZ-Imz">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="238.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tic Tac Toe" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGx-N7-e1m">
+                                    <rect key="frame" x="47" y="83.5" width="281.5" height="72"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            <constraints>
+                                <constraint firstItem="UGx-N7-e1m" firstAttribute="centerY" secondItem="0Qx-VZ-Imz" secondAttribute="centerY" id="Zj8-de-kD3"/>
+                                <constraint firstItem="UGx-N7-e1m" firstAttribute="centerX" secondItem="0Qx-VZ-Imz" secondAttribute="centerX" id="btL-lJ-92E"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="110" id="foh-R4-GhK"/>
-                        <constraint firstAttribute="height" constant="30" id="iMu-4M-DCU"/>
+                        <constraint firstAttribute="trailingMargin" secondItem="4KQ-hb-ucS" secondAttribute="trailing" constant="32" id="162-jq-Z07"/>
+                        <constraint firstItem="4KQ-hb-ucS" firstAttribute="centerY" secondItem="XLw-Pd-dwz" secondAttribute="centerY" id="BrL-3v-NoL"/>
+                        <constraint firstItem="0Qx-VZ-Imz" firstAttribute="top" secondItem="XLw-Pd-dwz" secondAttribute="top" id="DFM-Nn-FnV"/>
+                        <constraint firstItem="4KQ-hb-ucS" firstAttribute="top" secondItem="0Qx-VZ-Imz" secondAttribute="bottom" id="UoL-BJ-E5f"/>
+                        <constraint firstItem="4KQ-hb-ucS" firstAttribute="leading" secondItem="XLw-Pd-dwz" secondAttribute="leadingMargin" constant="32" id="VMc-2p-R1f"/>
+                        <constraint firstAttribute="trailing" secondItem="0Qx-VZ-Imz" secondAttribute="trailing" id="Xsk-3m-Ii4"/>
+                        <constraint firstItem="cbC-j4-ftc" firstAttribute="centerX" secondItem="XLw-Pd-dwz" secondAttribute="centerX" id="YJV-Sr-n0K"/>
+                        <constraint firstItem="Pn3-z8-bV4" firstAttribute="centerX" secondItem="XLw-Pd-dwz" secondAttribute="centerX" id="bZZ-2J-woY"/>
+                        <constraint firstItem="cbC-j4-ftc" firstAttribute="top" secondItem="4KQ-hb-ucS" secondAttribute="bottom" constant="8" id="ffg-xt-Ngp"/>
+                        <constraint firstItem="Pn3-z8-bV4" firstAttribute="top" secondItem="cbC-j4-ftc" secondAttribute="bottom" id="hnC-vI-3X5"/>
+                        <constraint firstItem="0Qx-VZ-Imz" firstAttribute="leading" secondItem="XLw-Pd-dwz" secondAttribute="leading" id="mdm-wT-1wC"/>
+                        <constraint firstItem="4KQ-hb-ucS" firstAttribute="centerX" secondItem="XLw-Pd-dwz" secondAttribute="centerX" id="oaM-pR-BHo"/>
                     </constraints>
-                    <state key="normal" title="Login"/>
-                    <connections>
-                        <action selector="loginTouchedWithSender:" destination="-1" eventType="touchUpInside" id="gNM-df-nh0"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pn3-z8-bV4">
-                    <rect key="frame" x="132.5" y="388.5" width="110" height="30"/>
-                    <color key="backgroundColor" red="0.39307173699999998" green="0.70665450510000005" blue="0.30782873509999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                    <state key="normal" title="Register"/>
-                    <connections>
-                        <action selector="gotoRegisterWithSender:" destination="-1" eventType="touchUpInside" id="qJc-7e-CSj"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="Pn3-z8-bV4" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="9eo-c1-uKJ"/>
-                <constraint firstItem="cbC-j4-ftc" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="EIh-ip-AMZ"/>
-                <constraint firstItem="Pn3-z8-bV4" firstAttribute="top" secondItem="cbC-j4-ftc" secondAttribute="bottom" constant="30" id="L2b-uq-yl1"/>
-                <constraint firstItem="Pn3-z8-bV4" firstAttribute="height" secondItem="cbC-j4-ftc" secondAttribute="height" id="UKq-16-PfM"/>
-                <constraint firstItem="Pn3-z8-bV4" firstAttribute="width" secondItem="cbC-j4-ftc" secondAttribute="width" id="mcR-ez-ElN"/>
-                <constraint firstItem="cbC-j4-ftc" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="nes-hJ-3Ro"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="XLw-Pd-dwz" secondAttribute="bottom" id="OhH-yt-xKU"/>
+                <constraint firstItem="XLw-Pd-dwz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Vuh-gw-WYI"/>
+                <constraint firstItem="XLw-Pd-dwz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ZO9-T8-Z6e"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XLw-Pd-dwz" secondAttribute="trailing" id="fhz-Ba-iql"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="133.59999999999999" y="151.57421289355324"/>

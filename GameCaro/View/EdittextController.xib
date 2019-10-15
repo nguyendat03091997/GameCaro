@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EdittextController" customModule="GameCaro" customModuleProvider="target">
+            <connections>
+                <outlet property="edtInput" destination="QaM-Ut-Noy" id="SOB-mM-Nua"/>
+                <outlet property="lbError" destination="zVt-3E-RA0" id="z29-yu-7q6"/>
+                <outlet property="lbInput" destination="2gJ-fi-u11" id="TAo-1k-zvx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="nRi-yL-qgi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="EZy-fo-v1E" userLabel="Input Stack">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gJ-fi-u11" userLabel="Input Label">
+                            <rect key="frame" x="0.0" y="0.0" width="42" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QaM-Ut-Noy" userLabel="Input ">
+                            <rect key="frame" x="0.0" y="50" width="375" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zVt-3E-RA0">
+                            <rect key="frame" x="0.0" y="100" width="375" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="QaM-Ut-Noy" secondAttribute="trailing" id="OXu-40-eME"/>
+                        <constraint firstAttribute="trailing" secondItem="zVt-3E-RA0" secondAttribute="trailing" id="RTF-wO-unI"/>
+                        <constraint firstItem="zVt-3E-RA0" firstAttribute="leading" secondItem="EZy-fo-v1E" secondAttribute="leading" id="T0j-gF-JnA"/>
+                        <constraint firstItem="QaM-Ut-Noy" firstAttribute="leading" secondItem="EZy-fo-v1E" secondAttribute="leading" id="zN7-JS-Che"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="EZy-fo-v1E" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Ia9-Ie-GIN"/>
+                <constraint firstItem="EZy-fo-v1E" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="KVN-JJ-YTU"/>
+                <constraint firstItem="EZy-fo-v1E" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="URD-JZ-Njr"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EZy-fo-v1E" secondAttribute="trailing" id="wQN-8N-1rJ"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="109"/>
+        </view>
+    </objects>
+</document>

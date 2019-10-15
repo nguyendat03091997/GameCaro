@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2803F92352C075000FEF77 /* EdittextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2803F72352C075000FEF77 /* EdittextController.swift */; };
+		1E2803FA2352C075000FEF77 /* EdittextController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2803F82352C075000FEF77 /* EdittextController.xib */; };
 		B00BA4D5234235C500FD6D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00BA4D4234235C500FD6D35 /* AppDelegate.swift */; };
 		B00BA4DC234235C700FD6D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00BA4DB234235C700FD6D35 /* Assets.xcassets */; };
 		B00BA4DF234235C700FD6D35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00BA4DD234235C700FD6D35 /* LaunchScreen.storyboard */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		06BE173E59A1517AEE47CC63 /* Pods_GameCaro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCaro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0263BD1F994DCCD75ADAD3 /* Pods-GameCaro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.release.xcconfig"; path = "Target Support Files/Pods-GameCaro/Pods-GameCaro.release.xcconfig"; sourceTree = "<group>"; };
+		1E2803F72352C075000FEF77 /* EdittextController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdittextController.swift; sourceTree = "<group>"; };
+		1E2803F82352C075000FEF77 /* EdittextController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EdittextController.xib; sourceTree = "<group>"; };
 		AC74EDF0B4D596894F9BA248 /* Pods-GameCaro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.debug.xcconfig"; path = "Target Support Files/Pods-GameCaro/Pods-GameCaro.debug.xcconfig"; sourceTree = "<group>"; };
 		B00BA4D1234235C500FD6D35 /* GameCaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameCaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00BA4D4234235C500FD6D35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 			children = (
 				B0701955234E2D0F00F7141A /* AllRoomCell.swift */,
 				B0701956234E2D0F00F7141A /* AllRoomCell.xib */,
+				1E2803F72352C075000FEF77 /* EdittextController.swift */,
+				1E2803F82352C075000FEF77 /* EdittextController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,6 +316,7 @@
 				B049A8CB23477EAB00E630BB /* DashBoardViewController.xib in Resources */,
 				B0E4008B234A2375001954D7 /* RankViewController.xib in Resources */,
 				B0E40087234A2367001954D7 /* AllRoomViewController.xib in Resources */,
+				1E2803FA2352C075000FEF77 /* EdittextController.xib in Resources */,
 				B0701954234E2A7100F7141A /* ContainerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +385,7 @@
 				B00BA4D5234235C500FD6D35 /* AppDelegate.swift in Sources */,
 				B049A8CA23477EAB00E630BB /* DashBoardViewController.swift in Sources */,
 				B0701957234E2D0F00F7141A /* AllRoomCell.swift in Sources */,
+				1E2803F92352C075000FEF77 /* EdittextController.swift in Sources */,
 				B0E40094234A409B001954D7 /* AdvanceTemplate.swift in Sources */,
 				B0F890372344DC0E005B496A /* Enums.swift in Sources */,
 				B0701953234E2A7100F7141A /* ContainerViewController.swift in Sources */,

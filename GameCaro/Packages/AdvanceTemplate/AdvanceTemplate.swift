@@ -34,7 +34,7 @@ open class SkyView: UIView {
         self.backgroundColor = UIColor.clear
         view.frame = bounds
         addSubview(view)
-        self.setFullLayout(view)
+       // self.setFullLayout(view)
     }
     
     override open func awakeFromNib() {
@@ -48,8 +48,8 @@ open class SkyView: UIView {
     }
     
     open func loadViewFromNib() -> UIView {
-        //        let bundle = Bundle(for: type(of: self))
-        let nib = UINib(nibName:self.classNameAsString(self), bundle: ProjectBundle)
+               let bundle = Bundle(for: type(of: self))
+        let nib = UINib(nibName:self.classNameAsString(self), bundle: bundle)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         
         return view
