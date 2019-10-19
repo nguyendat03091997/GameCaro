@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,6 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterViewController" customModule="GameCaro" customModuleProvider="target">
             <connections>
                 <outlet property="btnRegister" destination="M3d-Hz-w5P" id="cEB-K2-H2Y"/>
+                <outlet property="confirmView" destination="uvT-fR-kNE" id="PSx-6O-puR"/>
+                <outlet property="passwordView" destination="TtT-hj-dth" id="cEY-IH-M8Q"/>
+                <outlet property="userNameView" destination="TG1-XB-tCA" id="TDB-0Z-3GY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,25 +22,70 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3d-Hz-w5P">
-                    <rect key="frame" x="132.5" y="328.5" width="110" height="30"/>
-                    <color key="backgroundColor" red="0.45009386540000001" green="0.98132258650000004" blue="0.4743030667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0c0-i4-jRH">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="ABq-P4-9zC">
+                            <rect key="frame" x="37.5" y="233.5" width="300" height="200"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TG1-XB-tCA" userLabel="Username View" customClass="EdittextController" customModule="GameCaro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="61.5"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Username"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSecureInspect" value="NO"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TtT-hj-dth" userLabel="Password View" customClass="EdittextController" customModule="GameCaro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="69.5" width="300" height="61"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Password"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSecureInspect" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uvT-fR-kNE" userLabel="Confirm Password View" customClass="EdittextController" customModule="GameCaro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="138.5" width="300" height="61.5"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="labelText" value="Confirm Password"/>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="isSecureInspect" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="200" id="JfU-qQ-jhP"/>
+                            </constraints>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M3d-Hz-w5P">
+                            <rect key="frame" x="159" y="449.5" width="57" height="30"/>
+                            <state key="normal" title="Register">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="registerTouchedWithSender:" destination="-1" eventType="touchUpInside" id="Xh6-Ri-qw7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="110" id="1Rs-mI-bGi"/>
-                        <constraint firstAttribute="height" constant="30" id="G4X-1z-csN"/>
+                        <constraint firstItem="ABq-P4-9zC" firstAttribute="centerY" secondItem="0c0-i4-jRH" secondAttribute="centerY" id="83a-SJ-pww"/>
+                        <constraint firstItem="ABq-P4-9zC" firstAttribute="centerX" secondItem="0c0-i4-jRH" secondAttribute="centerX" id="Mex-88-JeY"/>
+                        <constraint firstItem="ABq-P4-9zC" firstAttribute="width" secondItem="0c0-i4-jRH" secondAttribute="width" multiplier="0.8" id="Vqi-Rc-mH3"/>
+                        <constraint firstItem="M3d-Hz-w5P" firstAttribute="top" secondItem="ABq-P4-9zC" secondAttribute="bottom" constant="16" id="eT4-ps-JsJ"/>
+                        <constraint firstItem="M3d-Hz-w5P" firstAttribute="centerX" secondItem="0c0-i4-jRH" secondAttribute="centerX" id="rIn-Qi-RzV"/>
                     </constraints>
-                    <state key="normal" title="Register"/>
-                    <connections>
-                        <action selector="registerTouchedWithSender:" destination="-1" eventType="touchUpInside" id="Xh6-Ri-qw7"/>
-                    </connections>
-                </button>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="M3d-Hz-w5P" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="5RH-kg-UL0"/>
-                <constraint firstItem="M3d-Hz-w5P" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="teJ-gT-76y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="0c0-i4-jRH" secondAttribute="bottom" id="4GA-cX-CtV"/>
+                <constraint firstItem="0c0-i4-jRH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Bgi-iU-0M9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0c0-i4-jRH" secondAttribute="trailing" id="bpN-9Y-1GH"/>
+                <constraint firstItem="0c0-i4-jRH" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="q6J-Lb-S0Q"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="138" y="154"/>
         </view>
     </objects>
 </document>

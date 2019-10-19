@@ -71,16 +71,20 @@ class LoginViewController: MasterViewController {
     }
 
     func validateLogin()-> (username:String,password:String, isValided: Bool){
-        let username = userNameView.value
-        let password = passwordView.value
+        let username = userNameView.value.trimmingCharacters(in: .whitespaces)
+        let password = passwordView.value.trimmingCharacters(in: .whitespaces)
         var isValided: Bool = true
         if (username.isEmpty){
             userNameView.errorText = "Username is required"
             isValided = false
+        } else {
+            userNameView.errorText = ""
         }
         if (password.isEmpty){
             passwordView.errorText = "Password is required"
             isValided = false
+        } else {
+            passwordView.errorText = ""
         }
         return (username, password, isValided)
         

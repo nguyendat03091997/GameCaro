@@ -62,6 +62,7 @@
                             </subviews>
                             <constraints>
                                 <constraint firstAttribute="height" constant="190" id="HXJ-JR-Jd3"/>
+                                <constraint firstAttribute="width" secondItem="0Qx-VZ-Imz" secondAttribute="width" id="eOl-QU-3K3"/>
                             </constraints>
                         </stackView>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Qx-VZ-Imz">
