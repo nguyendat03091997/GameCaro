@@ -14,11 +14,11 @@ class AllRoom_Request : MI{
 }
 
 class AllRoom_DTO: MI {
-    @objc dynamic var id = ""
+    @objc dynamic var id = 0
     @objc dynamic var host = ""
     @objc dynamic var host_id = ""
     @objc dynamic var host_socket = ""
-    @objc dynamic var bet_point = ""
+    @objc dynamic var bet_point = 0
     @objc dynamic var is_played = ""
     @objc dynamic var create_time = ""
     

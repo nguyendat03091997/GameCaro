@@ -1,14 +1,14 @@
 //
-//  AllRoomCell.swift
+//  RankCell.swift
 //  GameCaro
 //
-//  Created by Mojave on 10/14/19.
+//  Created by Mojave on 10/13/19.
 //  Copyright © 2019 DatNguyen. All rights reserved.
 //
 
 import UIKit
 
-class AllRoomCell: UITableViewCell {
+class RankCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
