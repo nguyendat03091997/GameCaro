@@ -11,7 +11,7 @@ import UIKit
 
 extension UIViewController{
     
-    func dialogSuccess(_ infor: String) {
+    func dialogInfor(_ infor: String) {
         let alertView = UIAlertController(title: "SUCCESS", message: infor, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alertView.addAction(action)
@@ -25,8 +25,8 @@ extension UIViewController{
         self.present(alertView, animated: true, completion: nil)
     }
     
-    func dialogSuccess(_ infor: String, implement:@escaping (()->Void)) {
-        let alertView = UIAlertController(title: "SUCCESS", message: infor, preferredStyle: .alert)
+    func dialogInfor(_ infor: String, implement:@escaping (()->Void)) {
+        let alertView = UIAlertController(title: "ANNOUNCE", message: infor, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel) { _ in
             implement()
         }

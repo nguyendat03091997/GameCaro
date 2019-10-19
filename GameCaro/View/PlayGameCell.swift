@@ -9,10 +9,21 @@
 import UIKit
 
 class PlayGameCell: UICollectionViewCell {
+    
+    @IBOutlet weak var viewContent: UIView!
+    @IBOutlet weak var imageBox: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        viewContent.layer.borderWidth = 0.5
+        viewContent.layer.borderColor = UIColor.darkGray.cgColor
+        imageBox.isHidden = true
     }
-
+    
+    func setData(_ image: String) {
+        viewContent.isHidden = true
+        imageBox.isHidden = false
+        imageBox.image = UIImage(named: image)?.withRenderingMode(.alwaysOriginal)
+    }
+    
 }

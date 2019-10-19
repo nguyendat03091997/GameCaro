@@ -9,7 +9,19 @@
 import Foundation
 
 enum APIFunc: String {
-    case login      = "/login"
-    case register   = "/register"
-    case allroom    = "/allroom"
+    case login          = "/login"
+    case register       = "/register"
+    case allroom        = "/allroom"
+    case rank           = "/user"
+    case create_room    = "/create-room"
+}
+
+enum Header: String{
+    case authenticated  = "authenticated"
+    case create_room    = "create_room"
+    case join_room      = "join_room"
+    case play_game      = "play_game"
+    case chat           = "chat"
+    case game_result    = "game_result"
+    case rank           = "rank"
 }

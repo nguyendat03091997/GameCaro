@@ -13,6 +13,18 @@ let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
 let HEIGHT_NAVIGATION = SCREEN_HEIGHT > 800 ? 84 : 64
 
 extension UIView{
+    
+    func setFullLayout(_ view : UIView) // full layout for sub view
+    {
+        view.translatesAutoresizingMaskIntoConstraints = false
+        self.addConstraint(NSLayoutConstraint(item: view, attribute: .top, relatedBy: .equal, toItem: self, attribute: .top, multiplier: 1.0, constant: 0))
+        
+        self.addConstraint(NSLayoutConstraint(item: view, attribute: .bottom, relatedBy: .equal, toItem: self, attribute: .bottom, multiplier: 1.0, constant: 0))
+        
+        self.addConstraint(NSLayoutConstraint(item: view, attribute: .trailing, relatedBy: .equal, toItem: self, attribute: .trailing, multiplier: 1.0, constant: 0))
+        
+        self.addConstraint(NSLayoutConstraint(item: view, attribute: .leading, relatedBy: .equal, toItem: self, attribute: .leading, multiplier: 1.0, constant: 0))
+    }
 
     func showActivity() {
         DispatchQueue.main.async {

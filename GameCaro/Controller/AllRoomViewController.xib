@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AllRoomViewController" customModule="GameCaro" customModuleProvider="target">
             <connections>
-                <outlet property="colecView" destination="NLw-vc-Odk" id="PoI-Iw-eSS"/>
+                <outlet property="tbView" destination="hgs-LN-scO" id="hyy-Cf-WwZ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,38 +21,36 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="NLw-vc-Odk">
-                    <rect key="frame" x="10" y="30" width="355" height="627"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hgs-LN-scO">
+                    <rect key="frame" x="15" y="120" width="345" height="547"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="UW1-oe-YJ1">
-                        <size key="itemSize" width="50" height="50"/>
-                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                    </collectionViewFlowLayout>
-                </collectionView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2y1-vo-aii">
-                    <rect key="frame" x="319" y="587" width="46" height="30"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vR0-Dp-KtV">
+                    <rect key="frame" x="305" y="567" width="40" height="40"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="46" id="hJs-51-oAf"/>
-                        <constraint firstAttribute="height" constant="30" id="z2M-A8-SQg"/>
+                        <constraint firstAttribute="height" constant="40" id="2cn-9a-huI"/>
+                        <constraint firstAttribute="width" constant="40" id="AxK-Xi-I3B"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Button" image="create-room"/>
                     <connections>
-                        <action selector="createWithSender:" destination="-1" eventType="touchUpInside" id="a9p-Me-wza"/>
+                        <action selector="createWithSender:" destination="-1" eventType="touchUpInside" id="9s3-6T-0Bt"/>
                     </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NLw-vc-Odk" secondAttribute="trailing" constant="10" id="1cA-1M-BVO"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2y1-vo-aii" secondAttribute="trailing" constant="10" id="Ozr-dv-bqE"/>
-                <constraint firstItem="NLw-vc-Odk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="abN-YJ-D55"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2y1-vo-aii" secondAttribute="bottom" constant="50" id="bI9-Le-szz"/>
-                <constraint firstItem="NLw-vc-Odk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="el1-Xa-Wml"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="NLw-vc-Odk" secondAttribute="bottom" constant="10" id="qVl-lL-NNd"/>
+                <constraint firstItem="hgs-LN-scO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="100" id="D0l-lM-ePC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hgs-LN-scO" secondAttribute="trailing" constant="15" id="Dtq-1y-xu2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="hgs-LN-scO" secondAttribute="bottom" id="Huj-11-NYn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="vR0-Dp-KtV" secondAttribute="bottom" constant="60" id="OcY-mS-SdQ"/>
+                <constraint firstItem="hgs-LN-scO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="fHL-Od-ZZa"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="vR0-Dp-KtV" secondAttribute="trailing" constant="30" id="mZR-DT-Plj"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
         </view>
     </objects>
+    <resources>
+        <image name="create-room" width="40.069564819335938" height="40.069564819335938"/>
+    </resources>
 </document>

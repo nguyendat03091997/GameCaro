@@ -7,14 +7,12 @@
 //
 
 import UIKit
-import SocketIO
 
 class AllRoomViewController: MasterViewController {
-
-    @IBOutlet weak var colecView: UICollectionView!
     
-    var collectionViewFlowLayout: UICollectionViewFlowLayout!
-    var listAllRoom: [AllRoom_DTO] = [AllRoom_DTO]()
+    @IBOutlet weak var tbView: UITableView!
+    
+    var listAllRoom: [Room_DTO] = [Room_DTO]()
     
     let cellIdentify: String = "cellAllRoom"
 
@@ -25,24 +23,16 @@ class AllRoomViewController: MasterViewController {
         self.setupView()
         self.loadData()
         self.dataRealTime()
+        
+        notifyInstance.add(self, #selector(handleNotify(_:)), .create_room)
     }
     
     func setupView() {
         self.setNavigationTitle("All Room")
         
-        colecView.delegate = self
-        colecView.dataSource = self
-        colecView.register(UINib(nibName: "AllRoomCell", bundle: nil), forCellWithReuseIdentifier: cellIdentify)
-        
-        collectionViewFlowLayout = UICollectionViewFlowLayout()
-        let width = UIScreen.main.bounds.size.width * 0.8
-        let height = width
-        collectionViewFlowLayout.itemSize = CGSize(width: width, height: height)
-        collectionViewFlowLayout.minimumLineSpacing = 20
-        collectionViewFlowLayout.minimumInteritemSpacing = 20
-        collectionViewFlowLayout.sectionInset = UIEdgeInsets.zero
-        
-        colecView.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
+        tbView.delegate = self
+        tbView.dataSource = self
+        tbView.register(UINib(nibName: "AllRoomCell", bundle: nil), forCellReuseIdentifier: cellIdentify)
         
     }
     
@@ -52,55 +42,75 @@ class AllRoomViewController: MasterViewController {
         Service.getAllRoom(success: { (response) in
             self.view.hideActivity()
             self.listAllRoom = response
-            self.colecView.reloadData()
+            self.tbView.reloadData()
         }) { (error) in
             self.view.hideActivity()
             self.dialogError(error)
         }
     }
     
-    func demo() {
-        
-    }
-    
     func dataRealTime() {
         webSocket.connect()
     }
     
-    @IBAction func create(sender: UIButton){
-        let data : [String:Any] = [
-            "token": accountDataManager.tokenID,
-            "host": accountDataManager.userInfor.username,
-            "host_id": accountDataManager.userInfor._id,
-            "bet_point": "10"
+    @objc func handleNotify(_ notify: Notification){
+        let data = notify.userInfo! as! [String:Any]
+        let dto = Room_DTO.init(dictionary: data as NSDictionary)
+        listAllRoom.append(dto)
+        tbView.reloadData()
+    }
+    
+    func handelJoinRoom(idRoom: Int){
+        
+        let data: NSDictionary = [
+            "token" : accountDataManager.tokenID,
+            "room_id" : idRoom,
+            "guest" : accountDataManager.userInfor.username,
+            "guest_id" : accountDataManager.userInfor._id
         ]
         
-        webSocket.emit(header: "create-room", data: [
-            "token": accountDataManager.tokenID,
-            "host": accountDataManager.userInfor.username,
-            "host_id": accountDataManager.userInfor._id,
-            "bet_point": "10"
-        ]) {
-            print("success")
+        webSocket.emit(header: .join_room, data: data) {
+            let viewController = PlayGameViewController()
+            viewController.isHost = false
+            viewController.myTurn = true
+            self.push(viewController)
         }
+        
+    }
+    
+    @IBAction func create(sender: UIButton){
+        let createView = PopupCreateRoomView()
+        createView.view.frame = self.view.bounds
+        self.view.addSubview(createView.view)
+        createView.didMove(toParent: self)
+        self.addChild(createView)
     }
 
 }
 
-extension AllRoomViewController: UICollectionViewDelegate, UICollectionViewDataSource{
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return self.listAllRoom.count
+extension AllRoomViewController: UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = AllRoomHeader()
+        header.lbTitle.text = "List All Room"
+        return header
+        
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentify, for: indexPath) as! AllRoomCell
-        cell.setData(listAllRoom[indexPath.row])
-        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+         return listAllRoom.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentify, for: indexPath) as! AllRoomCell
+        cell.setData(listAllRoom[indexPath.row], indexPath.row + 1)
+        cell.handleJoinRoom = self.handelJoinRoom(idRoom:)
         return cell
     }
     
-    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
     
     
 }
+

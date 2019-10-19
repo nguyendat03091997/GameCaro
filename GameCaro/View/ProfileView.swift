@@ -8,23 +8,34 @@
 
 import UIKit
 
-class ProfileView: UIViewController {
+class ProfileView: SkyView {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    @IBOutlet weak var lbTitle: UILabel!
+    @IBOutlet weak var lbValue: UILabel!
+    
+    @IBOutlet weak var mainView: UIView!
+    
+    override func initStyle() {
+        Utils.drawRimView(view: mainView, radius: 12)
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBInspectable var title: String{
+        set{
+            lbTitle.text = newValue
+        }
+        get{
+            return lbTitle.text ?? ""
+        }
     }
-    */
+    
+    var value: String{
+        set{
+            lbValue.text = newValue
+        }
+        get{
+            return lbValue.text ?? ""
+        }
+    }
+    
 
 }

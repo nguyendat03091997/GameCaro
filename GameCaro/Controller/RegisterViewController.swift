@@ -25,14 +25,14 @@ class RegisterViewController: MasterViewController {
     @IBAction func registerTouched(sender: UIButton){
         
         let request = Register_Request()
-        request.username = "thedat1"
+        request.username = "thedat2"
         request.password = "key1234"
         
         self.view.showActivity()
         Service.registerProcess(request: request, success: { (response) in
             
             self.view.hideActivity()
-            self.dialogSuccess("Register success")
+            self.dialogInfor("Register success")
             
         }) { (error) in
             self.view.hideActivity()

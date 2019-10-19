@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import SocketIO
 
 class LoginViewController: MasterViewController {
     
@@ -35,14 +34,14 @@ class LoginViewController: MasterViewController {
     @IBAction func loginTouched(sender: UIButton){
       
         let request = Login_Request()
-        request.username = "thedat1"
+        request.username = "thedat2"
         request.password = "key1234"
         self.view.showActivity()
         
         Service.loginProcess(request: request, success: { (response) in
             
             self.view.hideActivity()
-            self.dialogSuccess("Login is success !", implement: {
+            self.dialogInfor("Login is success !", implement: {
                 self.loginSuccess()
             })
             

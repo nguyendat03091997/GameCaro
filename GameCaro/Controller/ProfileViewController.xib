@@ -1,22 +1,113 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="GameCaro" customModuleProvider="target">
             <connections>
-                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="imageAvatar" destination="kFo-ax-7cg" id="9FP-t1-XkC"/>
+                <outlet property="imageCover" destination="UcO-Kc-KoK" id="b5F-aP-Cgt"/>
+                <outlet property="lbUserName" destination="rHD-is-2LS" id="OpC-YG-QSC"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="8XZ-uR-rKi"/>
+                <outlet property="viewPoint" destination="Pss-Tz-k2b" id="Xel-X9-3mL"/>
+                <outlet property="viewTotalGame" destination="3iT-oa-hEc" id="38q-is-5WS"/>
+                <outlet property="viewWinGame" destination="gfi-CR-va0" id="JFM-MK-xju"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9x-ss-9Go">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CaroVN" translatesAutoresizingMaskIntoConstraints="NO" id="UcO-Kc-KoK" userLabel="Cover">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="194"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </imageView>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Avatar" translatesAutoresizingMaskIntoConstraints="NO" id="kFo-ax-7cg" userLabel="Avatar">
+                            <rect key="frame" x="112.5" y="141" width="150" height="150"/>
+                            <constraints>
+                                <constraint firstAttribute="height" secondItem="kFo-ax-7cg" secondAttribute="width" id="avk-wT-bjv"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nguyen Dat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rHD-is-2LS">
+                            <rect key="frame" x="0.0" y="313" width="375" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="21" id="MDz-Vu-VkL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="spn-nj-miQ">
+                            <rect key="frame" x="60" y="391" width="255" height="166"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gfi-CR-va0" customClass="ProfileView" customModule="GameCaro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="255" height="45.5"/>
+                                    <color key="backgroundColor" red="0.52486832480000001" green="0.8155060609" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Win game : "/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3iT-oa-hEc" customClass="ProfileView" customModule="GameCaro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="60.5" width="255" height="45"/>
+                                    <color key="backgroundColor" red="0.52486832480000001" green="0.8155060609" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Total game :"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pss-Tz-k2b" customClass="ProfileView" customModule="GameCaro" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="120.5" width="255" height="45.5"/>
+                                    <color key="backgroundColor" red="0.52486832480000001" green="0.8155060609" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="Point :"/>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="166" id="4aS-9e-Lba"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="UcO-Kc-KoK" secondAttribute="trailing" id="8wc-Ui-St0"/>
+                        <constraint firstItem="kFo-ax-7cg" firstAttribute="centerX" secondItem="V9x-ss-9Go" secondAttribute="centerX" id="C6H-GR-rlE"/>
+                        <constraint firstAttribute="trailing" secondItem="spn-nj-miQ" secondAttribute="trailing" constant="60" id="DeF-nm-Xre"/>
+                        <constraint firstItem="rHD-is-2LS" firstAttribute="top" secondItem="kFo-ax-7cg" secondAttribute="bottom" constant="25" id="FAH-JM-ScT"/>
+                        <constraint firstItem="UcO-Kc-KoK" firstAttribute="leading" secondItem="V9x-ss-9Go" secondAttribute="leading" id="SBI-Nv-han"/>
+                        <constraint firstAttribute="trailing" secondItem="rHD-is-2LS" secondAttribute="trailing" id="TeE-jI-fk4"/>
+                        <constraint firstItem="rHD-is-2LS" firstAttribute="leading" secondItem="V9x-ss-9Go" secondAttribute="leading" id="Yn8-E2-RDi"/>
+                        <constraint firstItem="spn-nj-miQ" firstAttribute="leading" secondItem="V9x-ss-9Go" secondAttribute="leading" constant="60" id="iET-fy-V0n"/>
+                        <constraint firstAttribute="bottom" secondItem="spn-nj-miQ" secondAttribute="bottom" constant="90" id="jbi-GT-4ka"/>
+                        <constraint firstItem="UcO-Kc-KoK" firstAttribute="top" secondItem="V9x-ss-9Go" secondAttribute="top" id="rtQ-vE-WoP"/>
+                        <constraint firstItem="kFo-ax-7cg" firstAttribute="width" secondItem="V9x-ss-9Go" secondAttribute="width" multiplier="0.4" id="xjD-P3-0Mo"/>
+                        <constraint firstItem="UcO-Kc-KoK" firstAttribute="height" secondItem="V9x-ss-9Go" secondAttribute="height" multiplier="0.3" id="ygW-Fn-JA2"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V9x-ss-9Go" secondAttribute="trailing" id="JNg-Ke-Fa2"/>
+                <constraint firstItem="V9x-ss-9Go" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="lkD-g1-IsD"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="V9x-ss-9Go" secondAttribute="bottom" id="pwA-vR-gIc"/>
+                <constraint firstItem="V9x-ss-9Go" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ucb-9v-j2g"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="39.200000000000003" y="46.326836581709152"/>
         </view>
     </objects>
+    <resources>
+        <image name="Avatar" width="46.428211212158203" height="46.428211212158203"/>
+        <image name="CaroVN" width="640" height="642"/>
+    </resources>
 </document>

@@ -13,7 +13,7 @@ class AllRoom_Request : MI{
     @objc dynamic var user_id = ""
 }
 
-class AllRoom_DTO: MI {
+class Room_DTO: MI {
     @objc dynamic var id = 0
     @objc dynamic var host = ""
     @objc dynamic var host_id = ""
@@ -23,10 +23,10 @@ class AllRoom_DTO: MI {
     @objc dynamic var create_time = ""
     
     
-    class func list(_ data: [NSDictionary]) ->[AllRoom_DTO]{
-        var result = [AllRoom_DTO]()
+    class func list(_ data: [NSDictionary]) ->[Room_DTO]{
+        var result = [Room_DTO]()
         for item in data {
-            result.append(AllRoom_DTO.init(dictionary: item))
+            result.append(Room_DTO.init(dictionary: item))
         }
         return result
     }
@@ -34,7 +34,7 @@ class AllRoom_DTO: MI {
 }
 
 extension Service{
-    class func getAllRoom(success: @escaping (([AllRoom_DTO])->Void), failure: @escaping ((String)->Void)){
+    class func getAllRoom(success: @escaping (([Room_DTO])->Void), failure: @escaping ((String)->Void)){
         
         service.getDataAPI(apiFunc: .allroom, success: { (response) in
             
@@ -44,7 +44,7 @@ extension Service{
             }
             
             let arrDict = response.data as! [NSDictionary]
-            success(AllRoom_DTO.list(arrDict))
+            success(Room_DTO.list(arrDict))
             
         }) { (error) in
             failure(error)

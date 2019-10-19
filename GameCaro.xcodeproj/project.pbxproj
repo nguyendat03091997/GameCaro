@@ -7,23 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B001BF82235B214C002B52AA /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001BF80235B214C002B52AA /* MessageView.swift */; };
+		B001BF83235B214C002B52AA /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B001BF81235B214C002B52AA /* MessageView.xib */; };
 		B00BA4D5234235C500FD6D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00BA4D4234235C500FD6D35 /* AppDelegate.swift */; };
 		B00BA4DC234235C700FD6D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00BA4DB234235C700FD6D35 /* Assets.xcassets */; };
 		B00BA4DF234235C700FD6D35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00BA4DD234235C700FD6D35 /* LaunchScreen.storyboard */; };
+		B016F0192355B4A50073C8DE /* Notifycation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B016F0182355B4A50073C8DE /* Notifycation.swift */; };
+		B017C51823574DC60057D85A /* PlayGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017C51623574DC60057D85A /* PlayGameViewController.swift */; };
+		B017C51923574DC60057D85A /* PlayGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B017C51723574DC60057D85A /* PlayGameViewController.xib */; };
+		B017C51C235752E00057D85A /* PlayGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017C51A235752E00057D85A /* PlayGameCell.swift */; };
+		B017C51D235752E00057D85A /* PlayGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B017C51B235752E00057D85A /* PlayGameCell.xib */; };
 		B049A8CA23477EAB00E630BB /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049A8C823477EAB00E630BB /* DashBoardViewController.swift */; };
 		B049A8CB23477EAB00E630BB /* DashBoardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B049A8C923477EAB00E630BB /* DashBoardViewController.xib */; };
 		B049A8CD234786C700E630BB /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049A8CC234786C700E630BB /* Extension + UIViewController.swift */; };
 		B049A8D0234791D000E630BB /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049A8CF234791D000E630BB /* Utils.swift */; };
 		B049A8D22347AD7D00E630BB /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049A8D12347AD7D00E630BB /* MasterViewController.swift */; };
+		B053916B2354CBED00AED8EA /* AllRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05391692354CBED00AED8EA /* AllRoomCell.swift */; };
+		B053916C2354CBED00AED8EA /* AllRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B053916A2354CBED00AED8EA /* AllRoomCell.xib */; };
+		B053916F2354D14300AED8EA /* AllRoomHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = B053916D2354D14300AED8EA /* AllRoomHeader.swift */; };
+		B05391702354D14300AED8EA /* AllRoomHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = B053916E2354D14300AED8EA /* AllRoomHeader.xib */; };
+		B05391732354D50B00AED8EA /* PopupCreateRoomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05391712354D50B00AED8EA /* PopupCreateRoomView.swift */; };
+		B05391742354D50B00AED8EA /* PopupCreateRoomView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B05391722354D50B00AED8EA /* PopupCreateRoomView.xib */; };
 		B0701953234E2A7100F7141A /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0701951234E2A7100F7141A /* ContainerViewController.swift */; };
 		B0701954234E2A7100F7141A /* ContainerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0701952234E2A7100F7141A /* ContainerViewController.xib */; };
-		B0701957234E2D0F00F7141A /* AllRoomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0701955234E2D0F00F7141A /* AllRoomCell.swift */; };
-		B0701958234E2D0F00F7141A /* AllRoomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0701956234E2D0F00F7141A /* AllRoomCell.xib */; };
 		B0A564B5234251F5000764D6 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A564B4234251F5000764D6 /* Service.swift */; };
+		B0A7D68323531B5B00B356C5 /* Extension + DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7D68223531B5B00B356C5 /* Extension + DataType.swift */; };
+		B0A7D6852353305800B356C5 /* Rank.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7D6842353305800B356C5 /* Rank.swift */; };
+		B0C8D929235373DD00EE5EF5 /* RankCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C8D927235373DD00EE5EF5 /* RankCell.swift */; };
+		B0C8D92A235373DD00EE5EF5 /* RankCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0C8D928235373DD00EE5EF5 /* RankCell.xib */; };
+		B0C8D92D23538CB900EE5EF5 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C8D92B23538CB900EE5EF5 /* ProfileView.swift */; };
+		B0C8D92E23538CB900EE5EF5 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0C8D92C23538CB900EE5EF5 /* ProfileView.xib */; };
 		B0CB6DE12346452300626CFA /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CB6DE02346452300626CFA /* Register.swift */; };
 		B0CB6DE42346496400626CFA /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0CB6DE32346496400626CFA /* Extension+UIView.swift */; };
 		B0E4007F2349EFEC001954D7 /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E4007E2349EFEC001954D7 /* WebSocket.swift */; };
-		B0E400812349FB27001954D7 /* AllRoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E400802349FB27001954D7 /* AllRoom.swift */; };
+		B0E400812349FB27001954D7 /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E400802349FB27001954D7 /* Room.swift */; };
 		B0E40086234A2367001954D7 /* AllRoomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E40084234A2367001954D7 /* AllRoomViewController.swift */; };
 		B0E40087234A2367001954D7 /* AllRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0E40085234A2367001954D7 /* AllRoomViewController.xib */; };
 		B0E4008A234A2375001954D7 /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0E40088234A2375001954D7 /* RankViewController.swift */; };
@@ -46,25 +63,42 @@
 		06BE173E59A1517AEE47CC63 /* Pods_GameCaro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCaro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0263BD1F994DCCD75ADAD3 /* Pods-GameCaro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.release.xcconfig"; path = "Target Support Files/Pods-GameCaro/Pods-GameCaro.release.xcconfig"; sourceTree = "<group>"; };
 		AC74EDF0B4D596894F9BA248 /* Pods-GameCaro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.debug.xcconfig"; path = "Target Support Files/Pods-GameCaro/Pods-GameCaro.debug.xcconfig"; sourceTree = "<group>"; };
+		B001BF80235B214C002B52AA /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
+		B001BF81235B214C002B52AA /* MessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
 		B00BA4D1234235C500FD6D35 /* GameCaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameCaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00BA4D4234235C500FD6D35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B00BA4DB234235C700FD6D35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B00BA4DE234235C700FD6D35 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B00BA4E0234235C700FD6D35 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B016F0182355B4A50073C8DE /* Notifycation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifycation.swift; sourceTree = "<group>"; };
+		B017C51623574DC60057D85A /* PlayGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameViewController.swift; sourceTree = "<group>"; };
+		B017C51723574DC60057D85A /* PlayGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayGameViewController.xib; sourceTree = "<group>"; };
+		B017C51A235752E00057D85A /* PlayGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameCell.swift; sourceTree = "<group>"; };
+		B017C51B235752E00057D85A /* PlayGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayGameCell.xib; sourceTree = "<group>"; };
 		B049A8C823477EAB00E630BB /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		B049A8C923477EAB00E630BB /* DashBoardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashBoardViewController.xib; sourceTree = "<group>"; };
 		B049A8CC234786C700E630BB /* Extension + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
 		B049A8CF234791D000E630BB /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		B049A8D12347AD7D00E630BB /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		B05391692354CBED00AED8EA /* AllRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRoomCell.swift; sourceTree = "<group>"; };
+		B053916A2354CBED00AED8EA /* AllRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllRoomCell.xib; sourceTree = "<group>"; };
+		B053916D2354D14300AED8EA /* AllRoomHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRoomHeader.swift; sourceTree = "<group>"; };
+		B053916E2354D14300AED8EA /* AllRoomHeader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllRoomHeader.xib; sourceTree = "<group>"; };
+		B05391712354D50B00AED8EA /* PopupCreateRoomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupCreateRoomView.swift; sourceTree = "<group>"; };
+		B05391722354D50B00AED8EA /* PopupCreateRoomView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupCreateRoomView.xib; sourceTree = "<group>"; };
 		B0701951234E2A7100F7141A /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
 		B0701952234E2A7100F7141A /* ContainerViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContainerViewController.xib; sourceTree = "<group>"; };
-		B0701955234E2D0F00F7141A /* AllRoomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRoomCell.swift; sourceTree = "<group>"; };
-		B0701956234E2D0F00F7141A /* AllRoomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllRoomCell.xib; sourceTree = "<group>"; };
 		B0A564B4234251F5000764D6 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		B0A7D68223531B5B00B356C5 /* Extension + DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + DataType.swift"; sourceTree = "<group>"; };
+		B0A7D6842353305800B356C5 /* Rank.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rank.swift; sourceTree = "<group>"; };
+		B0C8D927235373DD00EE5EF5 /* RankCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RankCell.swift; path = GameCaro/RankCell.swift; sourceTree = SOURCE_ROOT; };
+		B0C8D928235373DD00EE5EF5 /* RankCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = RankCell.xib; path = GameCaro/RankCell.xib; sourceTree = SOURCE_ROOT; };
+		B0C8D92B23538CB900EE5EF5 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		B0C8D92C23538CB900EE5EF5 /* ProfileView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		B0CB6DE02346452300626CFA /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		B0CB6DE32346496400626CFA /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
 		B0E4007E2349EFEC001954D7 /* WebSocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebSocket.swift; sourceTree = "<group>"; };
-		B0E400802349FB27001954D7 /* AllRoom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRoom.swift; sourceTree = "<group>"; };
+		B0E400802349FB27001954D7 /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		B0E40084234A2367001954D7 /* AllRoomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllRoomViewController.swift; sourceTree = "<group>"; };
 		B0E40085234A2367001954D7 /* AllRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AllRoomViewController.xib; sourceTree = "<group>"; };
 		B0E40088234A2375001954D7 /* RankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
@@ -144,9 +178,18 @@
 			path = GameCaro;
 			sourceTree = "<group>";
 		};
+		B016F0172355B4900073C8DE /* Notifycation */ = {
+			isa = PBXGroup;
+			children = (
+				B016F0182355B4A50073C8DE /* Notifycation.swift */,
+			);
+			path = Notifycation;
+			sourceTree = "<group>";
+		};
 		B049A8D32347B0AE00E630BB /* Packages */ = {
 			isa = PBXGroup;
 			children = (
+				B016F0172355B4900073C8DE /* Notifycation */,
 				B0E40092234A400A001954D7 /* AdvanceTemplate */,
 				B049A8D42347B13B00E630BB /* MasterViewController */,
 				B0CB6DE22346494B00626CFA /* Extensions */,
@@ -178,6 +221,7 @@
 			children = (
 				B0CB6DE32346496400626CFA /* Extension+UIView.swift */,
 				B049A8CC234786C700E630BB /* Extension + UIViewController.swift */,
+				B0A7D68223531B5B00B356C5 /* Extension + DataType.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,6 +251,10 @@
 				B0E4008D234A2387001954D7 /* ProfileViewController.xib */,
 				B0701951234E2A7100F7141A /* ContainerViewController.swift */,
 				B0701952234E2A7100F7141A /* ContainerViewController.xib */,
+				B05391712354D50B00AED8EA /* PopupCreateRoomView.swift */,
+				B05391722354D50B00AED8EA /* PopupCreateRoomView.xib */,
+				B017C51623574DC60057D85A /* PlayGameViewController.swift */,
+				B017C51723574DC60057D85A /* PlayGameViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -217,7 +265,8 @@
 				B0F8903C2344EE6B005B496A /* Login.swift */,
 				B0F890422344F9F5005B496A /* AccountDataManager.swift */,
 				B0CB6DE02346452300626CFA /* Register.swift */,
-				B0E400802349FB27001954D7 /* AllRoom.swift */,
+				B0E400802349FB27001954D7 /* Room.swift */,
+				B0A7D6842353305800B356C5 /* Rank.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -225,8 +274,18 @@
 		B0F890352344DBFE005B496A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B0701955234E2D0F00F7141A /* AllRoomCell.swift */,
-				B0701956234E2D0F00F7141A /* AllRoomCell.xib */,
+				B0C8D927235373DD00EE5EF5 /* RankCell.swift */,
+				B0C8D928235373DD00EE5EF5 /* RankCell.xib */,
+				B0C8D92B23538CB900EE5EF5 /* ProfileView.swift */,
+				B0C8D92C23538CB900EE5EF5 /* ProfileView.xib */,
+				B05391692354CBED00AED8EA /* AllRoomCell.swift */,
+				B053916A2354CBED00AED8EA /* AllRoomCell.xib */,
+				B053916D2354D14300AED8EA /* AllRoomHeader.swift */,
+				B053916E2354D14300AED8EA /* AllRoomHeader.xib */,
+				B017C51A235752E00057D85A /* PlayGameCell.swift */,
+				B017C51B235752E00057D85A /* PlayGameCell.xib */,
+				B001BF80235B214C002B52AA /* MessageView.swift */,
+				B001BF81235B214C002B52AA /* MessageView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,14 +361,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				B00BA4DF234235C700FD6D35 /* LaunchScreen.storyboard in Resources */,
+				B017C51D235752E00057D85A /* PlayGameCell.xib in Resources */,
+				B017C51923574DC60057D85A /* PlayGameViewController.xib in Resources */,
+				B05391702354D14300AED8EA /* AllRoomHeader.xib in Resources */,
 				B00BA4DC234235C700FD6D35 /* Assets.xcassets in Resources */,
-				B0701958234E2D0F00F7141A /* AllRoomCell.xib in Resources */,
+				B0C8D92A235373DD00EE5EF5 /* RankCell.xib in Resources */,
 				B0E4008F234A2387001954D7 /* ProfileViewController.xib in Resources */,
 				B0F8903B2344E4A4005B496A /* LoginViewController.xib in Resources */,
 				B0F8904823450AD9005B496A /* RegisterViewController.xib in Resources */,
+				B053916C2354CBED00AED8EA /* AllRoomCell.xib in Resources */,
 				B049A8CB23477EAB00E630BB /* DashBoardViewController.xib in Resources */,
+				B0C8D92E23538CB900EE5EF5 /* ProfileView.xib in Resources */,
+				B05391742354D50B00AED8EA /* PopupCreateRoomView.xib in Resources */,
 				B0E4008B234A2375001954D7 /* RankViewController.xib in Resources */,
 				B0E40087234A2367001954D7 /* AllRoomViewController.xib in Resources */,
+				B001BF83235B214C002B52AA /* MessageView.xib in Resources */,
 				B0701954234E2A7100F7141A /* ContainerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -365,25 +431,35 @@
 			files = (
 				B0F890432344F9F5005B496A /* AccountDataManager.swift in Sources */,
 				B0F8903A2344E4A4005B496A /* LoginViewController.swift in Sources */,
+				B017C51823574DC60057D85A /* PlayGameViewController.swift in Sources */,
 				B0E4008E234A2387001954D7 /* ProfileViewController.swift in Sources */,
 				B0CB6DE42346496400626CFA /* Extension+UIView.swift in Sources */,
 				B0F890412344F86A005B496A /* Helper.swift in Sources */,
 				B0E4007F2349EFEC001954D7 /* WebSocket.swift in Sources */,
+				B016F0192355B4A50073C8DE /* Notifycation.swift in Sources */,
 				B0CB6DE12346452300626CFA /* Register.swift in Sources */,
+				B053916F2354D14300AED8EA /* AllRoomHeader.swift in Sources */,
 				B0E4008A234A2375001954D7 /* RankViewController.swift in Sources */,
+				B0A7D68323531B5B00B356C5 /* Extension + DataType.swift in Sources */,
+				B001BF82235B214C002B52AA /* MessageView.swift in Sources */,
+				B0A7D6852353305800B356C5 /* Rank.swift in Sources */,
 				B049A8D0234791D000E630BB /* Utils.swift in Sources */,
+				B05391732354D50B00AED8EA /* PopupCreateRoomView.swift in Sources */,
 				B0F8904723450AD9005B496A /* RegisterViewController.swift in Sources */,
+				B0C8D929235373DD00EE5EF5 /* RankCell.swift in Sources */,
 				B049A8CD234786C700E630BB /* Extension + UIViewController.swift in Sources */,
+				B0C8D92D23538CB900EE5EF5 /* ProfileView.swift in Sources */,
 				B0F8903D2344EE6B005B496A /* Login.swift in Sources */,
+				B017C51C235752E00057D85A /* PlayGameCell.swift in Sources */,
+				B053916B2354CBED00AED8EA /* AllRoomCell.swift in Sources */,
 				B00BA4D5234235C500FD6D35 /* AppDelegate.swift in Sources */,
 				B049A8CA23477EAB00E630BB /* DashBoardViewController.swift in Sources */,
-				B0701957234E2D0F00F7141A /* AllRoomCell.swift in Sources */,
 				B0E40094234A409B001954D7 /* AdvanceTemplate.swift in Sources */,
 				B0F890372344DC0E005B496A /* Enums.swift in Sources */,
 				B0701953234E2A7100F7141A /* ContainerViewController.swift in Sources */,
 				B049A8D22347AD7D00E630BB /* MasterViewController.swift in Sources */,
 				B0E40086234A2367001954D7 /* AllRoomViewController.swift in Sources */,
-				B0E400812349FB27001954D7 /* AllRoom.swift in Sources */,
+				B0E400812349FB27001954D7 /* Room.swift in Sources */,
 				B0A564B5234251F5000764D6 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

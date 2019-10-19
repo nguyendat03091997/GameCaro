@@ -1,13 +1,22 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupCreateRoomView" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopupCreateRoomView" customModule="GameCaro" customModuleProvider="target">
             <connections>
+                <outlet property="btnCancel" destination="IfK-Ll-KFO" id="42a-KJ-jih"/>
+                <outlet property="btnCreate" destination="SSB-rk-TbY" id="4Uz-DN-gU4"/>
+                <outlet property="cardView" destination="0Cj-F8-E89" id="yPc-pF-kna"/>
+                <outlet property="tfBetPoint" destination="kzT-Gc-lPh" id="5hU-BQ-IoL"/>
+                <outlet property="topViewTitle" destination="BAy-Dh-jln" id="dap-Rh-Su3"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,8 +24,100 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ggZ-f1-uJy">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Cj-F8-E89" userLabel="MainView">
+                    <rect key="frame" x="30" y="245.5" width="315" height="196"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkZ-uW-SDm">
+                            <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Room" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAy-Dh-jln">
+                                    <rect key="frame" x="0.0" y="0.0" width="315" height="30"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.52486832480000001" green="0.8155060609" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstItem="BAy-Dh-jln" firstAttribute="leading" secondItem="HkZ-uW-SDm" secondAttribute="leading" id="DHJ-tU-f8d"/>
+                                <constraint firstAttribute="bottom" secondItem="BAy-Dh-jln" secondAttribute="bottom" id="dU4-6f-64r"/>
+                                <constraint firstAttribute="trailing" secondItem="BAy-Dh-jln" secondAttribute="trailing" id="jJ2-AE-aXH"/>
+                                <constraint firstAttribute="height" constant="30" id="rXE-2Z-Hvh"/>
+                                <constraint firstItem="BAy-Dh-jln" firstAttribute="top" secondItem="HkZ-uW-SDm" secondAttribute="top" id="yrU-EJ-Afj"/>
+                            </constraints>
+                        </view>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter your bet point" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kzT-Gc-lPh">
+                            <rect key="frame" x="30" y="78" width="255" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="Gdz-W6-Qmo"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
+                        </textField>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="kMq-RF-RdR">
+                            <rect key="frame" x="60" y="145" width="195" height="35"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SSB-rk-TbY">
+                                    <rect key="frame" x="0.0" y="0.0" width="85" height="35"/>
+                                    <color key="backgroundColor" red="0.52486832480000001" green="0.8155060609" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="Create">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="createTouchedWithSender:" destination="-1" eventType="touchUpInside" id="eRw-RK-vk5"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IfK-Ll-KFO">
+                                    <rect key="frame" x="110" y="0.0" width="85" height="35"/>
+                                    <color key="backgroundColor" red="0.80821700510000005" green="0.21118055860000001" blue="0.1794808108" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="cancelTouchedWithSender:" destination="-1" eventType="touchUpInside" id="Uub-ee-9Sr"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="iWY-1U-J1w"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="kMq-RF-RdR" firstAttribute="leading" secondItem="0Cj-F8-E89" secondAttribute="leading" constant="60" id="0Sz-dR-3WO"/>
+                        <constraint firstAttribute="height" constant="196" id="5oI-98-ILt"/>
+                        <constraint firstItem="kzT-Gc-lPh" firstAttribute="centerY" secondItem="0Cj-F8-E89" secondAttribute="centerY" id="6M5-tb-9B5"/>
+                        <constraint firstAttribute="trailing" secondItem="kzT-Gc-lPh" secondAttribute="trailing" constant="30" id="NCX-QF-Uoq"/>
+                        <constraint firstAttribute="trailing" secondItem="kMq-RF-RdR" secondAttribute="trailing" constant="60" id="eHE-JH-04E"/>
+                        <constraint firstItem="HkZ-uW-SDm" firstAttribute="leading" secondItem="0Cj-F8-E89" secondAttribute="leading" id="gU5-uD-uHb"/>
+                        <constraint firstItem="kMq-RF-RdR" firstAttribute="top" secondItem="kzT-Gc-lPh" secondAttribute="bottom" constant="27" id="lRy-MH-95G"/>
+                        <constraint firstAttribute="trailing" secondItem="HkZ-uW-SDm" secondAttribute="trailing" id="q2d-d2-bWU"/>
+                        <constraint firstItem="HkZ-uW-SDm" firstAttribute="top" secondItem="0Cj-F8-E89" secondAttribute="top" id="rVc-Xe-T4V"/>
+                        <constraint firstItem="kzT-Gc-lPh" firstAttribute="leading" secondItem="0Cj-F8-E89" secondAttribute="leading" constant="30" id="rbb-gf-rzf"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0Cj-F8-E89" secondAttribute="trailing" constant="30" id="67v-nP-ao0"/>
+                <constraint firstItem="ggZ-f1-uJy" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="8Pd-0z-aQ2"/>
+                <constraint firstItem="ggZ-f1-uJy" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BVG-Rr-GP9"/>
+                <constraint firstItem="0Cj-F8-E89" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="MY7-ZZ-U3m"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ggZ-f1-uJy" secondAttribute="bottom" id="PBB-51-tsP"/>
+                <constraint firstItem="0Cj-F8-E89" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="if8-b1-k8c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ggZ-f1-uJy" secondAttribute="trailing" id="ik5-B5-YqB"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="132" y="129.98500749625188"/>
         </view>
     </objects>
 </document>

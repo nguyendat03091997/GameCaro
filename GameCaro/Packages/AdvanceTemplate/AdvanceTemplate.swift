@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 
+let bundleName = "com.DatNguyen.GameCaro"
+let ProjectBundle = Bundle.init(identifier: bundleName)!
+
 let template = AdvanceTemplate.shareInstance()
 class AdvanceTemplate{
     static var instance: AdvanceTemplate!
@@ -48,7 +51,7 @@ open class SkyView: UIView {
     }
     
     open func loadViewFromNib() -> UIView {
-        //        let bundle = Bundle(for: type(of: self))
+        //let bundle = Bundle(for: type(of: self))
         let nib = UINib(nibName:self.classNameAsString(self), bundle: ProjectBundle)
         let view = nib.instantiate(withOwner: self, options: nil)[0] as! UIView
         
@@ -66,6 +69,7 @@ open class SkyView: UIView {
         xibSetup()
     }
 }
+
 
 
 
