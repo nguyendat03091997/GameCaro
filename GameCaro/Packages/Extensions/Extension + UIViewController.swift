@@ -12,7 +12,7 @@ import UIKit
 extension UIViewController{
     
     func dialogInfor(_ infor: String) {
-        let alertView = UIAlertController(title: "SUCCESS", message: infor, preferredStyle: .alert)
+        let alertView = UIAlertController(title: "ANNOUNCE", message: infor, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alertView.addAction(action)
         self.present(alertView, animated: true, completion: nil)

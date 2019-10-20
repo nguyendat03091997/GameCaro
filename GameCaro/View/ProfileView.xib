@@ -33,7 +33,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="toh-ep-6JD"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -42,7 +42,7 @@
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="DFp-ps-Rbn"/>
                                     </constraints>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -50,7 +50,7 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </stackView>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="0.5925677533" blue="0.51500530870000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="1" green="0.82352941176470584" blue="0.56862745098039214" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="d4c-oZ-4yR" firstAttribute="centerY" secondItem="Ba0-hG-Iba" secondAttribute="centerY" id="Bau-ag-yPx"/>
                         <constraint firstAttribute="trailing" secondItem="d4c-oZ-4yR" secondAttribute="trailing" constant="20" id="GtB-2L-VS5"/>

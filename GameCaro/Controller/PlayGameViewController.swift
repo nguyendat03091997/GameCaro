@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol PlayGameViewControllerDelegate{
+    func handleMessage(_ message: String)
+}
+
 class PlayGameViewController: UIViewController {
 
     @IBOutlet weak var collectView: UICollectionView!
@@ -37,21 +41,31 @@ class PlayGameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        notifyInstance.add(self, #selector(handleJoinRoom(_:)), .join_room)
-        notifyInstance.add(self, #selector(handlePlayGame(_:)), .play_game)
-        notifyInstance.add(self, #selector(handleGameResutlt(_:)), .game_result)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        notifyInstance.remove(self, .join_room)
-        notifyInstance.remove(self, .play_game)
-        notifyInstance.remove(self, .game_result)
+        self.addNotify()
     }
     
     override func viewWillLayoutSubviews() {
         self.setupView()
         self.setupUI()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.removeNotify()
+    }
+    
+    func addNotify() {
+        notifyInstance.add(self, #selector(handleJoinRoom(_:)), .join_room)
+        notifyInstance.add(self, #selector(handlePlayGame(_:)), .play_game)
+        notifyInstance.add(self, #selector(handleGameResutlt(_:)), .game_result)
+        notifyInstance.add(self, #selector(handleChat(_:)), .chat)
+    }
+    
+    func removeNotify() {
+        notifyInstance.remove(self, .join_room)
+        notifyInstance.remove(self, .play_game)
+        notifyInstance.remove(self, .game_result)
+        notifyInstance.remove(self, .chat)
     }
     
     func setupView(){
@@ -109,6 +123,36 @@ class PlayGameViewController: UIViewController {
             self.pop()
         }
     }
+    @objc func handleChat(_ notify: Notification) {
+        let data = notify.userInfo as! [String:Any]
+        
+        let sender = data["sender"] as! String
+        let content = data["content"] as! String
+        
+        if(sender == accountDataManager.userInfor.username){
+            self.showMessage(content, self.viewChatSelf)
+        }else{
+            self.showMessage(content, self.viewChatCompetior)
+        }
+        
+    }
+    
+    func showMessage(_ message: String, _ viewChat: UIView) {
+        let viewMessage = MessageView()
+        viewMessage.frame = viewChatSelf.frame
+        viewMessage.center = viewChatSelf.center
+        
+        viewMessage.content = message
+        
+        viewChat.addSubview(viewMessage)
+        
+        UIView.animate(withDuration: 6.0, delay: 0.1, options: .curveEaseOut, animations: {
+            viewMessage.alpha = 0.5
+        }) { (iscomplete) in
+            viewMessage.removeFromSuperview()
+        }
+    }
+    
     
     func updateUI(_ hostName: String,_ guestName: String) {
         lbNameCompetitor.textColor = template.primaryColor
@@ -135,24 +179,13 @@ class PlayGameViewController: UIViewController {
         }
     }
     
-    @objc func handleMessage(){
-        
-    }
-    
     @IBAction func sendMessage(sender: UIButton){
-        let viewMessage = MessageView()
-        viewMessage.frame = viewChatSelf.frame
-        viewMessage.center = viewChatSelf.center
+        let viewcontroller = PopupChatViewController()
+        viewcontroller.delegate = self
+        viewcontroller.view.frame = self.view.frame
         
-        viewMessage.content = "co bao gio em nhow den anh nguoi oi !"
-        
-        viewChatSelf.addSubview(viewMessage)
-        
-        UIView.animate(withDuration: 6.0, delay: 0.1, options: .curveEaseOut, animations: {
-            viewMessage.alpha = 0.5
-        }) { (iscomplete) in
-            viewMessage.removeFromSuperview()
-        }
+        self.view.addSubview(viewcontroller.view)
+        self.addChild(viewcontroller)
         
     }
 
@@ -212,7 +245,7 @@ extension PlayGameViewController: UICollectionViewDelegate, UICollectionViewData
                 "token" : accountDataManager.tokenID,
                 "room_id" : self.Idroom,
                 "sender" : accountDataManager.userInfor.username,
-                "result" : " "
+                "result" : "lose"
             ]
             webSocket.emit(header: .game_result, data: data)
             
@@ -238,5 +271,21 @@ extension PlayGameViewController: UICollectionViewDelegate, UICollectionViewData
     
     }
     
+    
+}
+
+extension PlayGameViewController: PlayGameViewControllerDelegate{
+    func handleMessage(_ message: String) {
+        let data : NSDictionary = [
+            "token" : accountDataManager.tokenID,
+            "room_id" : self.Idroom,
+            "sender" : accountDataManager.userInfor.username,
+            "content" : message
+        ]
+        
+        webSocket.emit(header: .chat, data: data){
+            self.showMessage(message, self.viewChatSelf)
+        }
+    }
     
 }

@@ -37,7 +37,7 @@ open class SkyView: UIView {
         self.backgroundColor = UIColor.clear
         view.frame = bounds
         addSubview(view)
-        self.setFullLayout(view)
+       // self.setFullLayout(view)
     }
     
     override open func awakeFromNib() {

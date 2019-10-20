@@ -49,7 +49,10 @@ class Service{
     }
     
     func getDataAPI(apiFunc: APIFunc, success: @escaping ((ITAPIResponse)->Void), failure: @escaping ((String)->Void)) {
-        let url = self.url + apiFunc.rawValue
+        var url = self.url + apiFunc.rawValue
+        if(apiFunc == .user){
+            url += accountDataManager.userInfor._id
+        }
         
         getAlamofire(url: url).responseJSON { (data) in
             let response = self.processResponse(response: data)

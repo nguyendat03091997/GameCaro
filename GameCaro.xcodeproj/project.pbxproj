@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E2803F92352C075000FEF77 /* EdittextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2803F72352C075000FEF77 /* EdittextController.swift */; };
+		1E2803FA2352C075000FEF77 /* EdittextController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2803F82352C075000FEF77 /* EdittextController.xib */; };
 		B001BF82235B214C002B52AA /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001BF80235B214C002B52AA /* MessageView.swift */; };
 		B001BF83235B214C002B52AA /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B001BF81235B214C002B52AA /* MessageView.xib */; };
+		B001BF8A235B679E002B52AA /* PopupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001BF88235B679E002B52AA /* PopupChatViewController.swift */; };
+		B001BF8B235B679E002B52AA /* PopupChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B001BF89235B679E002B52AA /* PopupChatViewController.xib */; };
 		B00BA4D5234235C500FD6D35 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00BA4D4234235C500FD6D35 /* AppDelegate.swift */; };
 		B00BA4DC234235C700FD6D35 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B00BA4DB234235C700FD6D35 /* Assets.xcassets */; };
 		B00BA4DF234235C700FD6D35 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B00BA4DD234235C700FD6D35 /* LaunchScreen.storyboard */; };
@@ -17,6 +21,7 @@
 		B017C51923574DC60057D85A /* PlayGameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B017C51723574DC60057D85A /* PlayGameViewController.xib */; };
 		B017C51C235752E00057D85A /* PlayGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B017C51A235752E00057D85A /* PlayGameCell.swift */; };
 		B017C51D235752E00057D85A /* PlayGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B017C51B235752E00057D85A /* PlayGameCell.xib */; };
+		B01E03CD235BEF8800D45993 /* GetUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01E03CC235BEF8800D45993 /* GetUser.swift */; };
 		B049A8CA23477EAB00E630BB /* DashBoardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049A8C823477EAB00E630BB /* DashBoardViewController.swift */; };
 		B049A8CB23477EAB00E630BB /* DashBoardViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B049A8C923477EAB00E630BB /* DashBoardViewController.xib */; };
 		B049A8CD234786C700E630BB /* Extension + UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B049A8CC234786C700E630BB /* Extension + UIViewController.swift */; };
@@ -62,9 +67,13 @@
 /* Begin PBXFileReference section */
 		06BE173E59A1517AEE47CC63 /* Pods_GameCaro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCaro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D0263BD1F994DCCD75ADAD3 /* Pods-GameCaro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.release.xcconfig"; path = "Target Support Files/Pods-GameCaro/Pods-GameCaro.release.xcconfig"; sourceTree = "<group>"; };
+		1E2803F72352C075000FEF77 /* EdittextController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdittextController.swift; sourceTree = "<group>"; };
+		1E2803F82352C075000FEF77 /* EdittextController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EdittextController.xib; sourceTree = "<group>"; };
 		AC74EDF0B4D596894F9BA248 /* Pods-GameCaro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.debug.xcconfig"; path = "Target Support Files/Pods-GameCaro/Pods-GameCaro.debug.xcconfig"; sourceTree = "<group>"; };
 		B001BF80235B214C002B52AA /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		B001BF81235B214C002B52AA /* MessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
+		B001BF88235B679E002B52AA /* PopupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupChatViewController.swift; sourceTree = "<group>"; };
+		B001BF89235B679E002B52AA /* PopupChatViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupChatViewController.xib; sourceTree = "<group>"; };
 		B00BA4D1234235C500FD6D35 /* GameCaro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GameCaro.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B00BA4D4234235C500FD6D35 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B00BA4DB234235C700FD6D35 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +84,7 @@
 		B017C51723574DC60057D85A /* PlayGameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayGameViewController.xib; sourceTree = "<group>"; };
 		B017C51A235752E00057D85A /* PlayGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayGameCell.swift; sourceTree = "<group>"; };
 		B017C51B235752E00057D85A /* PlayGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayGameCell.xib; sourceTree = "<group>"; };
+		B01E03CC235BEF8800D45993 /* GetUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUser.swift; sourceTree = "<group>"; };
 		B049A8C823477EAB00E630BB /* DashBoardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardViewController.swift; sourceTree = "<group>"; };
 		B049A8C923477EAB00E630BB /* DashBoardViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DashBoardViewController.xib; sourceTree = "<group>"; };
 		B049A8CC234786C700E630BB /* Extension + UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + UIViewController.swift"; sourceTree = "<group>"; };
@@ -255,6 +265,8 @@
 				B05391722354D50B00AED8EA /* PopupCreateRoomView.xib */,
 				B017C51623574DC60057D85A /* PlayGameViewController.swift */,
 				B017C51723574DC60057D85A /* PlayGameViewController.xib */,
+				B001BF88235B679E002B52AA /* PopupChatViewController.swift */,
+				B001BF89235B679E002B52AA /* PopupChatViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -267,6 +279,7 @@
 				B0CB6DE02346452300626CFA /* Register.swift */,
 				B0E400802349FB27001954D7 /* Room.swift */,
 				B0A7D6842353305800B356C5 /* Rank.swift */,
+				B01E03CC235BEF8800D45993 /* GetUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -286,6 +299,8 @@
 				B017C51B235752E00057D85A /* PlayGameCell.xib */,
 				B001BF80235B214C002B52AA /* MessageView.swift */,
 				B001BF81235B214C002B52AA /* MessageView.xib */,
+				1E2803F72352C075000FEF77 /* EdittextController.swift */,
+				1E2803F82352C075000FEF77 /* EdittextController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -373,9 +388,11 @@
 				B049A8CB23477EAB00E630BB /* DashBoardViewController.xib in Resources */,
 				B0C8D92E23538CB900EE5EF5 /* ProfileView.xib in Resources */,
 				B05391742354D50B00AED8EA /* PopupCreateRoomView.xib in Resources */,
+				B001BF8B235B679E002B52AA /* PopupChatViewController.xib in Resources */,
 				B0E4008B234A2375001954D7 /* RankViewController.xib in Resources */,
 				B0E40087234A2367001954D7 /* AllRoomViewController.xib in Resources */,
 				B001BF83235B214C002B52AA /* MessageView.xib in Resources */,
+				1E2803FA2352C075000FEF77 /* EdittextController.xib in Resources */,
 				B0701954234E2A7100F7141A /* ContainerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -434,6 +451,7 @@
 				B017C51823574DC60057D85A /* PlayGameViewController.swift in Sources */,
 				B0E4008E234A2387001954D7 /* ProfileViewController.swift in Sources */,
 				B0CB6DE42346496400626CFA /* Extension+UIView.swift in Sources */,
+				B001BF8A235B679E002B52AA /* PopupChatViewController.swift in Sources */,
 				B0F890412344F86A005B496A /* Helper.swift in Sources */,
 				B0E4007F2349EFEC001954D7 /* WebSocket.swift in Sources */,
 				B016F0192355B4A50073C8DE /* Notifycation.swift in Sources */,
@@ -446,6 +464,7 @@
 				B049A8D0234791D000E630BB /* Utils.swift in Sources */,
 				B05391732354D50B00AED8EA /* PopupCreateRoomView.swift in Sources */,
 				B0F8904723450AD9005B496A /* RegisterViewController.swift in Sources */,
+				B01E03CD235BEF8800D45993 /* GetUser.swift in Sources */,
 				B0C8D929235373DD00EE5EF5 /* RankCell.swift in Sources */,
 				B049A8CD234786C700E630BB /* Extension + UIViewController.swift in Sources */,
 				B0C8D92D23538CB900EE5EF5 /* ProfileView.swift in Sources */,
@@ -454,6 +473,7 @@
 				B053916B2354CBED00AED8EA /* AllRoomCell.swift in Sources */,
 				B00BA4D5234235C500FD6D35 /* AppDelegate.swift in Sources */,
 				B049A8CA23477EAB00E630BB /* DashBoardViewController.swift in Sources */,
+				1E2803F92352C075000FEF77 /* EdittextController.swift in Sources */,
 				B0E40094234A409B001954D7 /* AdvanceTemplate.swift in Sources */,
 				B0F890372344DC0E005B496A /* Enums.swift in Sources */,
 				B0701953234E2A7100F7141A /* ContainerViewController.swift in Sources */,

@@ -14,6 +14,8 @@ enum APIFunc: String {
     case allroom        = "/allroom"
     case rank           = "/user"
     case create_room    = "/create-room"
+    case user           = "/user/"
+
 }
 
 enum Header: String{

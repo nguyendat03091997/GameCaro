@@ -79,24 +79,11 @@ class WSocket : NSObject, WebSocketDelegate{
             notifyInstance.post(.game_result, dataResponse["data"] as! [String:Any])
             //print("game result \(dataResponse["data"])")
         case .chat:
-            print("chat \(dataResponse["data"])")
+            notifyInstance.post(.chat, dataResponse["data"] as! [String:Any])
+            //print("chat \(dataResponse["data"])")
         default:
             break
         }
-        
-//        join room Optional({
-//            "bet_point" = 2;
-//            "create_time" = "2019-10-16T17:30:23+07:00";
-//            guest = thedat;
-//            "guest_id" = 5d900dc4f2e4e50da8f98e06;
-//            "guest_socket" = 5da6f13913301d0444e16f30;
-//            host = thedat2;
-        //            "host_socket" = 5da6f12813301d0444e16f2f;
-//            "host_id" = 5da6f05c13301d0444e16f2b;
-//            id = 4;
-//            "is_played" = 1;
-//        })
-        
         
         
     }

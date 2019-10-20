@@ -14,6 +14,7 @@ enum NotifyType: String {
     case join_room      = "join_room"
     case play_game      = "play_game"
     case game_result    = "game_result"
+    case chat           = "chat"
 }
 
 

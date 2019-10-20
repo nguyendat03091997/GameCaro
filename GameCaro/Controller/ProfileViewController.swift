@@ -17,10 +17,18 @@ class ProfileViewController: MasterViewController {
     @IBOutlet weak var viewWinGame: ProfileView!
     @IBOutlet weak var viewTotalGame: ProfileView!
     @IBOutlet weak var viewPoint: ProfileView!
+    
+    var user: User!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.setupView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         self.loadData()
     }
     
@@ -31,9 +39,26 @@ class ProfileViewController: MasterViewController {
     }
     
     func loadData() {
-        lbUserName.text = accountDataManager.userInfor.username
-        viewWinGame.value = accountDataManager.userInfor.win_game.description
-        viewTotalGame.value = accountDataManager.userInfor.total_game.description
-        viewPoint.value = accountDataManager.userInfor.point.description
+        
+        weak var weakself = self
+        weakself?.view.showActivity()
+        Service.getUser(success: { (response) in
+            weakself?.view.hideActivity()
+            
+            weakself?.user = response
+            weakself?.updateUI()
+            
+        }) { (error) in
+            weakself?.view.hideActivity()
+            weakself?.dialogError(error)
+        }
+        
+    }
+    
+    func updateUI() {
+        lbUserName.text = self.user.username
+        viewWinGame.value = self.user.win_game.description
+        viewTotalGame.value = self.user.total_game.description
+        viewPoint.value = self.user.point.description
     }
 }

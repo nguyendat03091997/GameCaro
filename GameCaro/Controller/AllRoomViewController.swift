@@ -21,10 +21,13 @@ class AllRoomViewController: MasterViewController {
         super.viewDidLoad()
         
         self.setupView()
-        self.loadData()
         self.dataRealTime()
         
         notifyInstance.add(self, #selector(handleNotify(_:)), .create_room)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.loadData()
     }
     
     func setupView() {
