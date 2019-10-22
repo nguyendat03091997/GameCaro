@@ -12,7 +12,7 @@ import Alamofire
 let service = Service.shareInstance()
 class Service{
     static var instance: Service!
-    let url: String = "http://localhost:3001"
+    let url: String = "https://server-haopn.herokuapp.com"
     class func shareInstance() ->Service{
         if(instance == nil){
             return Service()

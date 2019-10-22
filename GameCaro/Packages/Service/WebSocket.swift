@@ -24,7 +24,7 @@ class WSocket : NSObject, WebSocketDelegate{
     var socket: WebSocket!
     
     func connect() {
-        socket = WebSocket(url: URL(string: "http://localhost:3001")!)
+        socket = WebSocket(url: URL(string: "https://server-haopn.herokuapp.com")!)
         socket.delegate = self
         socket.connect()
         socket.onConnect = {
