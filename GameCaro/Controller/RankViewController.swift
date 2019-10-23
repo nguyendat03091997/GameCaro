@@ -23,6 +23,10 @@ class RankViewController: MasterViewController {
         self.setupView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+         self.loadData()
+    }
+    
     func setupView() {
         self.setNavigationTitle("Top Rank")
         

@@ -34,6 +34,16 @@ class PopupCreateRoomView: UIViewController {
     }
     
     @IBAction func createTouched(sender : UIButton){
+        if(tfBetPoint.text == ""){
+            self.dialogInfor("Please enter bet point !")
+            return
+        }
+        let score = Int(tfBetPoint.text!) ?? 0
+        if(score > accountDataManager.userInfor.point){
+            self.dialogInfor("You don't have enough point !")
+            return
+        }
+        
         let dataDict: NSDictionary = [
                     "token": accountDataManager.tokenID,
                     "host_id": accountDataManager.userInfor._id,

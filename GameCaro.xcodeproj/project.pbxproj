@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		1E2803F92352C075000FEF77 /* EdittextController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E2803F72352C075000FEF77 /* EdittextController.swift */; };
 		1E2803FA2352C075000FEF77 /* EdittextController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2803F82352C075000FEF77 /* EdittextController.xib */; };
+		AAB430B39B1813C9992C01C9 /* Pods_GameCaro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B9D4686F5DBA7CC1018426D /* Pods_GameCaro.framework */; };
 		B001BF82235B214C002B52AA /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001BF80235B214C002B52AA /* MessageView.swift */; };
 		B001BF83235B214C002B52AA /* MessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B001BF81235B214C002B52AA /* MessageView.xib */; };
 		B001BF8A235B679E002B52AA /* PopupChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B001BF88235B679E002B52AA /* PopupChatViewController.swift */; };
@@ -61,15 +62,13 @@
 		B0F890432344F9F5005B496A /* AccountDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F890422344F9F5005B496A /* AccountDataManager.swift */; };
 		B0F8904723450AD9005B496A /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0F8904523450AD9005B496A /* RegisterViewController.swift */; };
 		B0F8904823450AD9005B496A /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0F8904623450AD9005B496A /* RegisterViewController.xib */; };
-		C89310F75FEA969E01406C44 /* Pods_GameCaro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06BE173E59A1517AEE47CC63 /* Pods_GameCaro.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		06BE173E59A1517AEE47CC63 /* Pods_GameCaro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCaro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1D0263BD1F994DCCD75ADAD3 /* Pods-GameCaro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.release.xcconfig"; path = "Target Support Files/Pods-GameCaro/Pods-GameCaro.release.xcconfig"; sourceTree = "<group>"; };
+		06C3BE6F1AA59A1948CF748B /* Pods-GameCaro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaro/Pods-GameCaro.debug.xcconfig"; sourceTree = "<group>"; };
 		1E2803F72352C075000FEF77 /* EdittextController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EdittextController.swift; sourceTree = "<group>"; };
 		1E2803F82352C075000FEF77 /* EdittextController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EdittextController.xib; sourceTree = "<group>"; };
-		AC74EDF0B4D596894F9BA248 /* Pods-GameCaro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.debug.xcconfig"; path = "Target Support Files/Pods-GameCaro/Pods-GameCaro.debug.xcconfig"; sourceTree = "<group>"; };
+		5B9D4686F5DBA7CC1018426D /* Pods_GameCaro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GameCaro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B001BF80235B214C002B52AA /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		B001BF81235B214C002B52AA /* MessageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageView.xib; sourceTree = "<group>"; };
 		B001BF88235B679E002B52AA /* PopupChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupChatViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +123,7 @@
 		B0F890422344F9F5005B496A /* AccountDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountDataManager.swift; sourceTree = "<group>"; };
 		B0F8904523450AD9005B496A /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		B0F8904623450AD9005B496A /* RegisterViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		E9B941C410BFC57728EAE4A0 /* Pods-GameCaro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GameCaro.release.xcconfig"; path = "Pods/Target Support Files/Pods-GameCaro/Pods-GameCaro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C89310F75FEA969E01406C44 /* Pods_GameCaro.framework in Frameworks */,
+				AAB430B39B1813C9992C01C9 /* Pods_GameCaro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,18 +141,10 @@
 		1C818D1D61BADBAAFA0CC2D6 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AC74EDF0B4D596894F9BA248 /* Pods-GameCaro.debug.xcconfig */,
-				1D0263BD1F994DCCD75ADAD3 /* Pods-GameCaro.release.xcconfig */,
+				06C3BE6F1AA59A1948CF748B /* Pods-GameCaro.debug.xcconfig */,
+				E9B941C410BFC57728EAE4A0 /* Pods-GameCaro.release.xcconfig */,
 			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		8473EC3FC3424FB273412AC7 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				06BE173E59A1517AEE47CC63 /* Pods_GameCaro.framework */,
-			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		B00BA4C8234235C500FD6D35 = {
@@ -161,7 +153,7 @@
 				B00BA4D3234235C500FD6D35 /* GameCaro */,
 				B00BA4D2234235C500FD6D35 /* Products */,
 				1C818D1D61BADBAAFA0CC2D6 /* Pods */,
-				8473EC3FC3424FB273412AC7 /* Frameworks */,
+				E364B8E6D2CEB2DC15848DC7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -315,6 +307,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		E364B8E6D2CEB2DC15848DC7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B9D4686F5DBA7CC1018426D /* Pods_GameCaro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -322,11 +322,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B00BA4E3234235C700FD6D35 /* Build configuration list for PBXNativeTarget "GameCaro" */;
 			buildPhases = (
-				8DF019AE058063D3C9D377B4 /* [CP] Check Pods Manifest.lock */,
+				F1888BF7DA3B8195E19ED8F6 /* [CP] Check Pods Manifest.lock */,
 				B00BA4CD234235C500FD6D35 /* Sources */,
 				B00BA4CE234235C500FD6D35 /* Frameworks */,
 				B00BA4CF234235C500FD6D35 /* Resources */,
-				F5154F1BFEF8876D409CD0E6 /* [CP] Embed Pods Frameworks */,
+				EA9C259D5E89724AA74367FE /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -400,7 +400,31 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		8DF019AE058063D3C9D377B4 /* [CP] Check Pods Manifest.lock */ = {
+		EA9C259D5E89724AA74367FE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GameCaro/Pods-GameCaro-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GameCaro/Pods-GameCaro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F1888BF7DA3B8195E19ED8F6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -420,23 +444,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F5154F1BFEF8876D409CD0E6 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GameCaro/Pods-GameCaro-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-GameCaro/Pods-GameCaro-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GameCaro/Pods-GameCaro-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -549,7 +556,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -604,7 +611,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -616,7 +623,7 @@
 		};
 		B00BA4E4234235C700FD6D35 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC74EDF0B4D596894F9BA248 /* Pods-GameCaro.debug.xcconfig */;
+			baseConfigurationReference = 06C3BE6F1AA59A1948CF748B /* Pods-GameCaro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -636,7 +643,7 @@
 		};
 		B00BA4E5234235C700FD6D35 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1D0263BD1F994DCCD75ADAD3 /* Pods-GameCaro.release.xcconfig */;
+			baseConfigurationReference = E9B941C410BFC57728EAE4A0 /* Pods-GameCaro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -664,7 +671,7 @@
 				B00BA4E2234235C700FD6D35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		B00BA4E3234235C700FD6D35 /* Build configuration list for PBXNativeTarget "GameCaro" */ = {
 			isa = XCConfigurationList;
@@ -673,7 +680,7 @@
 				B00BA4E5234235C700FD6D35 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

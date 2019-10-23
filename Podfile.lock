@@ -7,7 +7,7 @@ DEPENDENCIES:
   - Starscream (~> 3.0.2)
 
 SPEC REPOS:
-  trunk:
+  https://github.com/cocoapods/specs.git:
     - Alamofire
     - Starscream
 
@@ -17,4 +17,4 @@ SPEC CHECKSUMS:
 
 PODFILE CHECKSUM: 1b9f6568569841c8d823fdb449a91c192536e9c9
 
-COCOAPODS: 1.8.1
+COCOAPODS: 1.5.3
